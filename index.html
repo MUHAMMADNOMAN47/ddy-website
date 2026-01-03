@@ -9,138 +9,1007 @@
     content="DUDDY (DDY) – a fun, community-driven meme token. No stress. Just DUDDY."
   />
 
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg:#050509;--card:#0c0f18;--accent1:#a855f7;--accent2:#22c55e;--accent3:#38bdf8;
-      --text:#f9fafb;--muted:#9ca3af;--border-soft:rgba(148,163,184,.35);
-      --shadow-soft:0 22px 60px rgba(0,0,0,.65);--radius-xl:24px;--radius-lg:18px;
-      --radius-pill:999px;--transition-fast:180ms ease-out;
+      --bg1:#020617;
+      --bg2:#020617;
+      --bg3:#0f172a;
+      --bg4:#111827;
+      --card:#020617;
+      --accent1:#a855f7;
+      --accent2:#22c55e;
+      --accent3:#38bdf8;
+      --accent4:#f97316;
+      --text:#f9fafb;
+      --muted:#9ca3af;
+      --border-soft:rgba(148,163,184,.35);
+      --shadow-soft:0 24px 60px rgba(0,0,0,.75);
+      --radius-xl:24px;
+      --radius-lg:18px;
+      --radius-pill:999px;
+      --transition-fast:180ms ease-out;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family:Poppins,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      background:radial-gradient(circle at top left,#1f2937 0,#020617 38%,#000 100%);
-      color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;
+
+    * {
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
     }
-    .page-wrap{min-height:100vh;display:flex;flex-direction:column}
-    main{flex:1}
-    .max-w{max-width:1120px;margin:0 auto;padding:20px 16px 60px}
 
-    .nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(16px);
-      background:linear-gradient(to bottom,rgba(3,7,18,.95),rgba(3,7,18,.82),transparent);
-      border-bottom:1px solid rgba(148,163,184,.18)}
-    .nav-inner{max-width:1120px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .nav-left{display:flex;align-items:center;gap:10px}
-    .nav-logo{width:40px;height:40px;border-radius:14px;object-fit:cover;
-      border:2px solid rgba(248,250,252,.8);box-shadow:0 0 24px rgba(52,211,153,.4)}
-    .nav-title{font-size:1.08rem;font-weight:700;letter-spacing:.04em}
-    .nav-pill{font-size:.75rem;padding:4px 10px;border-radius:999px;
-      border:1px solid rgba(52,211,153,.6);
-      background:radial-gradient(circle at top left,rgba(52,211,153,.3),rgba(56,189,248,.05));
-      color:var(--muted);text-transform:uppercase}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:10px 18px;border-radius:999px;font-size:.86rem;font-weight:500;
-      text-decoration:none;cursor:pointer;border:1px solid transparent;
-      transition:transform var(--transition-fast),box-shadow var(--transition-fast),background var(--transition-fast),border-color var(--transition-fast),color var(--transition-fast)}
-    .btn-primary{background:linear-gradient(135deg,var(--accent1),var(--accent3),var(--accent2));box-shadow:0 14px 35px rgba(59,130,246,.65);color:#020617}
-    .btn-outline{border-color:rgba(148,163,184,.6);color:var(--muted);background:rgba(15,23,42,.75)}
+    body {
+      font-family:"Poppins",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      background:linear-gradient(130deg,var(--bg1),var(--bg2),var(--bg3),var(--bg4));
+      background-size:300% 300%;
+      animation:bg-move 18s ease-in-out infinite;
+    }
 
-    .hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;align-items:center;padding-top:36px}
-    @media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:26px}}
-    .hero-logo{width:210px;border-radius:30px;border:2px solid rgba(248,250,252,.95);box-shadow:0 18px 40px rgba(56,189,248,.9);background:#020617}
+    @keyframes bg-move {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
+    }
 
-    section{margin-top:40px}
-    .card{background:linear-gradient(145deg,rgba(15,23,42,.96),rgba(2,6,23,.98));border-radius:24px;padding:18px;border:1px solid var(--border-soft);box-shadow:var(--shadow-soft)}
-    footer{border-top:1px solid rgba(31,41,55,.9);background:#020617}
-    .footer-inner{max-width:1120px;margin:auto;padding:16px;font-size:.78rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap}
+    .page-wrap {
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+
+    main {flex:1;}
+
+    .max-w {
+      max-width:1120px;
+      margin:0 auto;
+      padding:20px 16px 60px;
+    }
+
+    /* NAV */
+
+    .nav {
+      position:sticky;
+      top:0;
+      z-index:40;
+      backdrop-filter:blur(18px);
+      background:linear-gradient(to bottom,rgba(15,23,42,.96),rgba(15,23,42,.86),transparent);
+      border-bottom:1px solid rgba(148,163,184,.25);
+      animation:fade-down 700ms ease-out;
+    }
+
+    .nav-inner {
+      max-width:1120px;
+      margin:0 auto;
+      padding:12px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .nav-left {
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .nav-logo-wrap {
+      position:relative;
+      width:44px;
+      height:44px;
+    }
+
+    .nav-logo-glow {
+      position:absolute;
+      inset:-4px;
+      border-radius:18px;
+      background:radial-gradient(circle at top,#22c55e55,transparent 60%);
+      filter:blur(10px);
+      opacity:.6;
+      pointer-events:none;
+      animation:pulse-soft 2.4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-soft {
+      0%,100% {opacity:.4;transform:scale(.95);}
+      50% {opacity:.9;transform:scale(1.05);}
+    }
+
+    .nav-logo {
+      position:relative;
+      width:44px;
+      height:44px;
+      border-radius:16px;
+      object-fit:cover;
+      border:2px solid rgba(248,250,252,.9);
+      box-shadow:0 0 26px rgba(34,197,94,.65);
+      animation:float-logo 4s ease-in-out infinite;
+      cursor:pointer;
+    }
+
+    @keyframes float-logo {
+      0%,100% {transform:translateY(0);}
+      50% {transform:translateY(-4px);}
+    }
+
+    .nav-logo:hover {
+      transform:translateY(-2px) scale(1.03);
+      box-shadow:0 0 30px rgba(56,189,248,.85);
+    }
+
+    .nav-title {
+      font-size:1.05rem;
+      font-weight:700;
+      letter-spacing:.05em;
+    }
+
+    .nav-pill {
+      font-size:.72rem;
+      padding:3px 10px;
+      border-radius:999px;
+      border:1px solid rgba(52,211,153,.65);
+      background:radial-gradient(circle at top left,rgba(52,211,153,.4),rgba(56,189,248,.06));
+      color:var(--muted);
+      text-transform:uppercase;
+    }
+
+    .nav-right {
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:9px 18px;
+      border-radius:var(--radius-pill);
+      font-size:.84rem;
+      font-weight:500;
+      text-decoration:none;
+      cursor:pointer;
+      border:1px solid transparent;
+      white-space:nowrap;
+      transition:transform var(--transition-fast),box-shadow var(--transition-fast),
+                 background var(--transition-fast),border-color var(--transition-fast),color var(--transition-fast);
+    }
+
+    .btn-primary {
+      background:linear-gradient(135deg,var(--accent1),var(--accent3),var(--accent2));
+      color:#020617;
+      box-shadow:0 14px 32px rgba(37,99,235,.75);
+    }
+
+    .btn-primary:hover {
+      transform:translateY(-1px) scale(1.03);
+      box-shadow:0 18px 40px rgba(56,189,248,.9);
+    }
+
+    .btn-outline {
+      border-color:rgba(148,163,184,.7);
+      color:var(--muted);
+      background:rgba(15,23,42,.92);
+    }
+
+    .btn-outline:hover {
+      color:var(--text);
+      border-color:rgba(248,250,252,.9);
+      background:radial-gradient(circle at top left,rgba(148,163,184,.42),rgba(15,23,42,.98));
+      transform:translateY(-1px);
+    }
+
+    /* HERO */
+
+    .hero {
+      display:grid;
+      grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+      gap:30px;
+      align-items:center;
+      padding-top:32px;
+    }
+
+    @media (max-width:900px){
+      .hero {grid-template-columns:1fr;padding-top:26px;}
+    }
+
+    .hero-left {
+      animation:fade-up 800ms ease-out;
+    }
+
+    .hero-kicker {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:4px 12px 4px 4px;
+      border-radius:999px;
+      background:rgba(15,23,42,.92);
+      border:1px solid rgba(148,163,184,.5);
+      margin-bottom:16px;
+      box-shadow:0 10px 26px rgba(15,23,42,.8);
+    }
+
+    .hero-kicker-badge {
+      padding:3px 10px;
+      border-radius:999px;
+      background:radial-gradient(circle at top left,rgba(34,197,94,.9),rgba(56,189,248,.35));
+      font-size:.7rem;
+      font-weight:600;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#0b1120;
+    }
+
+    .hero-kicker-text {
+      font-size:.78rem;
+      color:var(--muted);
+    }
+
+    .hero-title {
+      font-size:clamp(2.35rem,4.1vw,3.15rem);
+      font-weight:700;
+      margin-bottom:10px;
+    }
+
+    .hero-title span {
+      background:linear-gradient(135deg,var(--accent4),var(--accent1),var(--accent3),var(--accent2));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .hero-sub {
+      font-size:.98rem;
+      color:var(--muted);
+      max-width:520px;
+      margin-bottom:20px;
+    }
+
+    .hero-actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:16px;
+    }
+
+    .hero-mini {
+      font-size:.78rem;
+      color:var(--muted);
+    }
+
+    .hero-right {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      animation:float-card 5.4s ease-in-out infinite;
+    }
+
+    .hero-card {
+      position:relative;
+      background:radial-gradient(circle at top,#1f2937,#020617 60%);
+      border-radius:30px;
+      padding:22px 20px 18px;
+      box-shadow:var(--shadow-soft);
+      border:1px solid rgba(148,163,184,.45);
+      max-width:420px;
+      width:100%;
+      overflow:hidden;
+    }
+
+    .hero-glow {
+      position:absolute;
+      inset:-70%;
+      background:
+        radial-gradient(circle at top left,rgba(168,85,247,.16),transparent 60%),
+        radial-gradient(circle at bottom right,rgba(45,212,191,.16),transparent 60%);
+      opacity:.9;
+      pointer-events:none;
+    }
+
+    .hero-logo-wrap {
+      position:relative;
+      z-index:1;
+      display:flex;
+      justify-content:center;
+      margin-bottom:14px;
+    }
+
+    .hero-logo {
+      width:210px;
+      max-width:100%;
+      border-radius:30px;
+      border:2px solid rgba(248,250,252,.96);
+      box-shadow:0 18px 46px rgba(56,189,248,.9);
+      background:#020617;
+      animation:float-logo-big 5s ease-in-out infinite;
+    }
+
+    @keyframes float-card {
+      0%,100% {transform:translateY(0);}
+      50% {transform:translateY(-6px);}
+    }
+
+    @keyframes float-logo-big {
+      0%,100% {transform:translateY(0) scale(1);}
+      50% {transform:translateY(-4px) scale(1.02);}
+    }
+
+    .hero-stat-row {
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+      margin-bottom:14px;
+    }
+
+    .hero-stat {
+      padding:9px 9px;
+      border-radius:16px;
+      background:rgba(15,23,42,.95);
+      border:1px solid rgba(148,163,184,.7);
+      backdrop-filter:blur(10px);
+      transition:transform var(--transition-fast),box-shadow var(--transition-fast),border-color var(--transition-fast);
+    }
+
+    .hero-stat:hover {
+      transform:translateY(-2px);
+      box-shadow:0 14px 28px rgba(15,23,42,.9);
+      border-color:rgba(248,250,252,.85);
+    }
+
+    .hero-stat-label {
+      font-size:.7rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--muted);
+      margin-bottom:4px;
+    }
+
+    .hero-stat-value {
+      font-size:.9rem;
+      font-weight:600;
+    }
+
+    .hero-badge-bottom {
+      position:relative;
+      z-index:1;
+      margin-top:4px;
+      padding:9px 10px;
+      border-radius:18px;
+      font-size:.78rem;
+      color:var(--muted);
+      background:rgba(15,23,42,.96);
+      border:1px dashed rgba(148,163,184,.7);
+      text-align:center;
+    }
+
+    /* SECTION BASE */
+
+    section {margin-top:40px;}
+
+    .section-header {
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      gap:8px;
+      margin-bottom:14px;
+    }
+
+    .section-title {
+      font-size:1.35rem;
+      font-weight:600;
+    }
+
+    .section-kicker {
+      font-size:.8rem;
+      text-transform:uppercase;
+      letter-spacing:.2em;
+      color:var(--muted);
+    }
+
+    .section-description {
+      font-size:.87rem;
+      color:var(--muted);
+    }
+
+    .card {
+      background:linear-gradient(145deg,rgba(15,23,42,.98),rgba(2,6,23,.98));
+      border-radius:var(--radius-xl);
+      padding:18px;
+      border:1px solid var(--border-soft);
+      box-shadow:var(--shadow-soft);
+    }
+
+    /* ABOUT GRID */
+
+    .about-grid {
+      display:grid;
+      grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);
+      gap:18px;
+    }
+
+    @media(max-width:900px){
+      .about-grid{grid-template-columns:1fr;}
+    }
+
+    .card-title {
+      font-size:1rem;
+      font-weight:600;
+      margin-bottom:8px;
+    }
+
+    .card-body {
+      font-size:.9rem;
+      color:var(--muted);
+    }
+
+    .tag-row {
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+    }
+
+    .tag-pill {
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,.7);
+      font-size:.75rem;
+      color:var(--muted);
+    }
+
+    /* TOKENOMICS */
+
+    .tokenomics-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+      gap:14px;
+    }
+
+    .token-box {
+      background:radial-gradient(circle at top,rgba(37,99,235,.35),rgba(15,23,42,1));
+      border-radius:var(--radius-lg);
+      padding:14px 14px 12px;
+      border:1px solid var(--border-soft);
+      box-shadow:0 18px 40px rgba(15,23,42,.9);
+      transform:translateY(0);
+      transition:transform var(--transition-fast),box-shadow var(--transition-fast),border-color var(--transition-fast);
+    }
+
+    .token-box:hover {
+      transform:translateY(-3px);
+      box-shadow:0 22px 50px rgba(15,23,42,.98);
+      border-color:rgba(191,219,254,.9);
+    }
+
+    .token-label {
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:var(--muted);
+      margin-bottom:5px;
+    }
+
+    .token-value {
+      font-size:1rem;
+      font-weight:600;
+    }
+
+    .token-note {
+      font-size:.76rem;
+      color:var(--muted);
+      margin-top:4px;
+    }
+
+    /* ROADMAP */
+
+    .roadmap-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+    }
+
+    .phase {
+      background:linear-gradient(150deg,rgba(24,24,27,.98),rgba(30,64,175,.7));
+      border-radius:var(--radius-lg);
+      padding:14px 14px 10px;
+      border:1px solid rgba(59,130,246,.4);
+      box-shadow:0 18px 40px rgba(15,23,42,.96);
+      transition:transform var(--transition-fast),box-shadow var(--transition-fast);
+    }
+
+    .phase:hover {
+      transform:translateY(-3px);
+      box-shadow:0 24px 60px rgba(15,23,42,1);
+    }
+
+    .phase-title {
+      font-size:.96rem;
+      font-weight:600;
+      margin-bottom:6px;
+    }
+
+    .phase-tag {
+      display:inline-block;
+      font-size:.7rem;
+      padding:2px 8px;
+      border-radius:999px;
+      border:1px solid rgba(191,219,254,.9);
+      color:#e5e7eb;
+      margin-bottom:6px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+    .phase ul {
+      list-style:none;
+      font-size:.82rem;
+      color:#e5e7eb;
+    }
+
+    .phase li {
+      margin-bottom:4px;
+      position:relative;
+      padding-left:12px;
+    }
+
+    .phase li::before {
+      content:"•";
+      position:absolute;
+      left:0;
+      color:#a5b4fc;
+    }
+
+    /* HOW TO BUY */
+
+    .steps {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+    }
+
+    .step {
+      padding:14px 14px 12px;
+      border-radius:var(--radius-lg);
+      border:1px solid var(--border-soft);
+      background:linear-gradient(155deg,rgba(15,23,42,.98),rgba(8,47,73,.9));
+      box-shadow:0 18px 40px rgba(15,23,42,.9);
+      transition:transform var(--transition-fast),box-shadow var(--transition-fast),border-color var(--transition-fast);
+    }
+
+    .step:hover {
+      transform:translateY(-3px);
+      box-shadow:0 22px 52px rgba(15,23,42,1);
+      border-color:rgba(56,189,248,.8);
+    }
+
+    .step-number {
+      width:22px;
+      height:22px;
+      border-radius:999px;
+      border:1px solid rgba(248,250,252,.7);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      font-size:.75rem;
+      margin-bottom:6px;
+    }
+
+    .step-title {
+      font-size:.9rem;
+      font-weight:600;
+      margin-bottom:4px;
+    }
+
+    .step-body {
+      font-size:.83rem;
+      color:var(--muted);
+    }
+
+    /* COMMUNITY */
+
+    footer {
+      border-top:1px solid rgba(31,41,55,.9);
+      background:#020617;
+    }
+
+    .footer-inner {
+      max-width:1120px;
+      margin:0 auto;
+      padding:16px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      font-size:.78rem;
+      color:var(--muted);
+    }
+
+    .footer-links {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .footer-link {
+      text-decoration:none;
+      color:var(--muted);
+    }
+
+    .footer-link:hover {
+      color:var(--text);
+    }
+
+    /* SIMPLE FADE-IN ON SCROLL */
+
+    .reveal {
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity 0.6s ease-out,transform 0.6s ease-out;
+    }
+    .reveal.visible {
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @keyframes fade-up {
+      from {opacity:0;transform:translateY(18px);}
+      to {opacity:1;transform:translateY(0);}
+    }
+
+    @keyframes fade-down {
+      from {opacity:0;transform:translateY(-16px);}
+      to {opacity:1;transform:translateY(0);}
+    }
   </style>
 </head>
 
 <body>
 <div class="page-wrap">
 
-<header class="nav">
-  <div class="nav-inner">
-    <div class="nav-left">
-      <!-- LOGO FIXED -->
-      <img src="duddy-logo.png" alt="DUDDY Logo" class="nav-logo">
-      <div>
-        <div class="nav-title">DUDDY</div>
-        <div class="nav-pill">$DDY • Meme Token</div>
-      </div>
-    </div>
-
-    <div class="nav-right">
-      <a href="#how-to-buy" class="btn btn-outline">How to Buy</a>
-      <a href="#community" class="btn btn-primary">Join Community</a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <div class="max-w">
-
-    <!-- HERO -->
-    <section class="hero">
-      <div>
-        <h1 style="font-size:2.4rem;font-weight:700;margin-bottom:10px;">
-          The internet’s new <span style="background:linear-gradient(135deg,#f97316,#e879f9,#22c55e);-webkit-background-clip:text;color:transparent;">favorite dog</span> on-chain.
-        </h1>
-
-        <p style="color:#9ca3af;margin-bottom:16px;">
-          DUDDY ($DDY) is a fun, community-driven meme token — no stress, no drama. Just vibes.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#">Buy on DEX (soon)</a>
-          <a class="btn btn-outline" href="#tokenomics">View Tokenomics</a>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="nav-logo-wrap">
+          <div class="nav-logo-glow"></div>
+          <!-- LOGO: file name duddy-logo.png must be in same folder as this file -->
+          <img src="duddy-logo.png" alt="DUDDY Logo" class="nav-logo">
         </div>
-
-        <p style="color:#9ca3af;font-size:.8rem;">
-          Contract address: <strong>coming soon</strong>
-        </p>
-      </div>
-
-      <div style="display:flex;justify-content:center;">
-        <div style="background:#020617;border:1px solid rgba(148,163,184,.4);border-radius:30px;padding:20px;box-shadow:0 22px 60px rgba(0,0,0,.65)">
-          <!-- BIG LOGO FIXED -->
-          <img src="duddy-logo.png" alt="DUDDY Logo" class="hero-logo">
+        <div>
+          <div class="nav-title">DUDDY</div>
+          <div class="nav-pill">$DDY • Meme Token</div>
         </div>
       </div>
-    </section>
-
-    <!-- SIMPLE ABOUT -->
-    <section>
-      <div class="card">
-        <h3 style="margin-bottom:6px;">What is DUDDY?</h3>
-        <p style="color:#9ca3af">
-          A chill meme token on Solana — built for community, memes, and good energy.
-        </p>
+      <div class="nav-right">
+        <a href="#how-to-buy" class="btn btn-outline">How to Buy</a>
+        <a href="#community" class="btn btn-primary">Join Community</a>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <!-- TOKENOMICS -->
-    <section id="tokenomics">
-      <div class="card">
-        <h3>Tokenomics</h3>
-        <p style="color:#9ca3af">Details coming after launch.</p>
+  <main>
+    <div class="max-w">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-left">
+          <div class="hero-kicker">
+            <span class="hero-kicker-badge">New on Solana</span>
+            <span class="hero-kicker-text">No stress. Just DUDDY.</span>
+          </div>
+
+          <h1 class="hero-title">
+            The internet’s new <span>favorite dog</span> on-chain.
+          </h1>
+
+          <p class="hero-sub">
+            DUDDY ($DDY) is a fun, community-driven meme token built for
+            late-night charts, inside jokes and good vibes only. No roadmap
+            over-promising – just a pack that actually enjoys the ride.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary">Buy on DEX (soon)</a>
+            <a href="#tokenomics" class="btn btn-outline">View Tokenomics</a>
+          </div>
+
+          <p class="hero-mini">
+            Contract address: <strong>coming soon</strong> — always verify before trading.
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-glow"></div>
+            <div class="hero-logo-wrap">
+              <!-- Big logo -->
+              <img src="duddy-logo.png" alt="DUDDY Logo" class="hero-logo">
+            </div>
+
+            <div class="hero-stat-row">
+              <div class="hero-stat">
+                <div class="hero-stat-label">Ticker</div>
+                <div class="hero-stat-value">$DDY</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Chain</div>
+                <div class="hero-stat-value">Solana</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Supply</div>
+                <div class="hero-stat-value">TBA</div>
+              </div>
+            </div>
+
+            <div class="hero-badge-bottom">
+              Fair launch meme token. No financial advice – just a dog and the
+              people who like him.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">About</div>
+            <h2 class="section-title">What is DUDDY?</h2>
+          </div>
+          <p class="section-description">
+            One cute dog, one ticker, one community that doesn’t take itself too seriously.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <div class="card" style="margin-bottom:14px;">
+              <h3 class="card-title">Vibes over promises</h3>
+              <p class="card-body">
+                DUDDY is not here to sell you a 100-page whitepaper. It’s a pure meme token —
+                launched for fun, culture and community. No fake utility buzzwords, no roadmaps
+                we don’t believe in.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Community first</h3>
+              <p class="card-body">
+                The real alpha is the pack. DUDDY is built for people who enjoy hanging out in chats,
+                posting memes and watching charts together. Holders drive the narrative, content and direction.
+              </p>
+              <div class="tag-row">
+                <span class="tag-pill">No team tokens (plan)</span>
+                <span class="tag-pill">No presale (plan)</span>
+                <span class="tag-pill">Fair launch culture</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <h3 class="card-title">Core idea</h3>
+              <p class="card-body">
+                • Keep it simple<br>
+                • Keep it transparent<br>
+                • Make it actually fun<br><br>
+                Everything else can evolve with the community once DUDDY is live. Until then, the
+                mission is: ship the token, set the vibes, grow the pack.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOKENOMICS -->
+      <section id="tokenomics" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Tokenomics</div>
+            <h2 class="section-title">$DDY at a glance</h2>
+          </div>
+          <p class="section-description">
+            Numbers here are placeholders – update them once the contract is deployed.
+          </p>
+        </div>
+
+        <div class="tokenomics-grid">
+          <div class="token-box">
+            <div class="token-label">Total supply</div>
+            <div class="token-value">TBA</div>
+            <div class="token-note">Example: 1,000,000,000 DDY</div>
+          </div>
+
+          <div class="token-box">
+            <div class="token-label">Buy / sell tax</div>
+            <div class="token-value">0% / 0%</div>
+            <div class="token-note">Pure meme trading – no hidden fees (if you choose 0/0).</div>
+          </div>
+
+          <div class="token-box">
+            <div class="token-label">Liquidity</div>
+            <div class="token-value">TBA</div>
+            <div class="token-note">Plan: add liquidity on a major Solana DEX and lock / burn.</div>
+          </div>
+
+          <div class="token-box">
+            <div class="token-label">Ownership</div>
+            <div class="token-value">TBA</div>
+            <div class="token-note">Option: renounce contract once everything is stable.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROADMAP -->
+      <section id="roadmap" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Roadmap</div>
+            <h2 class="section-title">From idea to full pack</h2>
+          </div>
+        </div>
+
+        <div class="roadmap-grid">
+          <div class="phase">
+            <div class="phase-tag">Phase 1</div>
+            <h3 class="phase-title">Launch the dog</h3>
+            <ul>
+              <li>Deploy DDY on Solana</li>
+              <li>Add initial liquidity on DEX</li>
+              <li>List logo on wallets & trackers</li>
+              <li>Open X / Telegram / Discord</li>
+            </ul>
+          </div>
+
+          <div class="phase">
+            <div class="phase-tag">Phase 2</div>
+            <h3 class="phase-title">Grow the pack</h3>
+            <ul>
+              <li>Community raids & meme contests</li>
+              <li>Influencer shout-outs & collabs</li>
+              <li>Website & light docs live</li>
+              <li>First community events & spaces</li>
+            </ul>
+          </div>
+
+          <div class="phase">
+            <div class="phase-tag">Phase 3</div>
+            <h3 class="phase-title">Build identity</h3>
+            <ul>
+              <li>DUDDY mascot & branding</li>
+              <li>Stickers, GIFs & meme packs</li>
+              <li>Potential NFT drop for holders</li>
+              <li>Small but consistent marketing</li>
+            </ul>
+          </div>
+
+          <div class="phase">
+            <div class="phase-tag">Phase 4</div>
+            <h3 class="phase-title">Long-term play</h3>
+            <ul>
+              <li>Liquidity lock / burn plans (if community agrees)</li>
+              <li>Explore CEX listings (no promises)</li>
+              <li>Community treasury concepts</li>
+              <li>Holder-driven proposals & maybe merch</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW TO BUY -->
+      <section id="how-to-buy" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Guide</div>
+            <h2 class="section-title">How to buy $DDY</h2>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-title">Get a Solana wallet</div>
+            <p class="step-body">
+              Download a Solana wallet like Phantom or Backpack. Create a new wallet,
+              back up your seed phrase and keep it offline and private.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-title">Fund with SOL</div>
+            <p class="step-body">
+              Buy SOL on an exchange and send it to your wallet address. You’ll
+              use SOL to swap into $DDY and pay network fees.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-title">Swap for $DDY</div>
+            <p class="step-body">
+              Once the contract address is live, paste it into a Solana DEX
+              (Raydium, Jupiter, etc.), confirm it is the correct token and
+              swap your SOL into DDY.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-title">Join the pack</div>
+            <p class="step-body">
+              Add DDY to your wallet watchlist, join the community channels,
+              and help build the culture with memes, feedback and good energy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMMUNITY -->
+      <section id="community" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Community</div>
+            <h2 class="section-title">Run with DUDDY</h2>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="card-body">
+            DUDDY is only as strong as the people behind it. If you vibe with the idea,
+            jump in early and help shape the story from day one.
+          </p>
+          <div class="tag-row" style="margin-top:12px;">
+            <!-- Replace # with real links when ready -->
+            <a href="#" class="btn btn-outline">X (Twitter)</a>
+            <a href="#" class="btn btn-outline">Telegram</a>
+            <a href="#" class="btn btn-outline">Discord</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> DUDDY • $DDY. Meme token. No promises, just vibes.</div>
+      <div class="footer-links">
+        <a href="#about" class="footer-link">About</a>
+        <a href="#tokenomics" class="footer-link">Tokenomics</a>
+        <a href="#how-to-buy" class="footer-link">Guide</a>
       </div>
-    </section>
-
-  </div>
-</main>
-
-<footer>
-  <div class="footer-inner">
-    <span>© 2026 DUDDY — community meme token</span>
-    <span>No financial advice. Have fun only.</span>
-  </div>
-</footer>
-
+    </div>
+  </footer>
 </div>
+
+<script>
+  // Current year in footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Simple scroll reveal
+  const reveals = document.querySelectorAll(".reveal");
+  const onScroll = () => {
+    const trigger = window.innerHeight * 0.82;
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < trigger) {
+        el.classList.add("visible");
+      }
+    });
+  };
+  window.addEventListener("scroll", onScroll);
+  onScroll();
+</script>
 </body>
 </html>

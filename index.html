@@ -1,0 +1,777 @@
+<img src="" alt=""/><img src="images/duddy-logo.png" alt="DUDDY Logo" class="nav-logo"><h1></h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DUDDY • DDY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="DUDDY (DDY) – a fun, community-driven meme token. No stress. Just DUDDY."
+  />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #050509;
+      --card: #0c0f18;
+      --accent1: #a855f7;
+      --accent2: #22c55e;
+      --accent3: #38bdf8;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --border-soft: rgba(148, 163, 184, 0.35);
+      --shadow-soft: 0 22px 60px rgba(0, 0, 0, 0.65);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --transition-fast: 180ms ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #1f2937 0, #020617 38%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .max-w {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+    }
+
+    /* ---------- NAV ---------- */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(3,7,18,0.95), rgba(3,7,18,0.82), transparent);
+      border-bottom: 1px solid rgba(148,163,184,0.18);
+    }
+
+    .nav-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 2px solid rgba(248, 250, 252, 0.8);
+      box-shadow: 0 0 24px rgba(52, 211, 153, 0.4);
+    }
+
+    .nav-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .nav-pill {
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(52, 211, 153, 0.6);
+      background: radial-gradient(circle at top left, rgba(52,211,153,0.3), rgba(56,189,248,0.05));
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 0.86rem;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent1), var(--accent3), var(--accent2));
+      box-shadow: 0 14px 35px rgba(59,130,246,0.65);
+      color: #020617;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 18px 40px rgba(59,130,246,0.75);
+    }
+
+    .btn-outline {
+      border-color: rgba(148,163,184,0.6);
+      color: var(--muted);
+      background: rgba(15,23,42,0.75);
+    }
+
+    .btn-outline:hover {
+      color: var(--text);
+      border-color: rgba(248,250,252,0.9);
+      background: radial-gradient(circle at top left, rgba(148,163,184,0.35), rgba(15,23,42,0.95));
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 32px;
+      align-items: center;
+      padding-top: 36px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 26px;
+      }
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px 4px 4px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.45);
+      margin-bottom: 16px;
+    }
+
+    .hero-kicker-badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: radial-gradient(circle at top left, rgba(52,211,153,0.5), rgba(56,189,248,0.2));
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-kicker-text {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-title {
+      font-size: clamp(2.25rem, 4vw, 3.1rem);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #f97316, #e879f9, #22c55e);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin-bottom: 20px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .hero-mini {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .hero-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-card {
+      position: relative;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      border-radius: 30px;
+      padding: 24px 22px 20px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148,163,184,0.4);
+      max-width: 420px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      inset: -80%;
+      background:
+        radial-gradient(circle at top left, rgba(168,85,247,0.18), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(45,212,191,0.14), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-logo-wrap {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .hero-logo {
+      width: 210px;
+      max-width: 100%;
+      border-radius: 30px;
+      border: 2px solid rgba(248,250,252,0.95);
+      box-shadow: 0 18px 40px rgba(56,189,248,0.9);
+      background: #020617;
+    }
+
+    .hero-stat-row {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .hero-stat {
+      padding: 10px 10px;
+      border-radius: 16px;
+      background: rgba(15,23,42,0.95);
+      border: 1px solid rgba(148,163,184,0.6);
+    }
+
+    .hero-stat-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .hero-stat-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-badge-bottom {
+      position: relative;
+      z-index: 1;
+      margin-top: 4px;
+      padding: 9px 10px;
+      border-radius: 18px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: rgba(15,23,42,0.95);
+      border: 1px dashed rgba(148,163,184,0.7);
+      text-align: center;
+    }
+
+    /* ---------- SECTIONS ---------- */
+
+    section {
+      margin-top: 40px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+    }
+
+    .section-description {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(15,23,42,0.96), rgba(2,6,23,0.98));
+      border-radius: var(--radius-xl);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card + .card {
+      margin-top: 14px;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card-body {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tag-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* Tokenomics */
+
+    .tokenomics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+
+    .token-box {
+      background: radial-gradient(circle at top, rgba(37,99,235,0.25), rgba(15,23,42,1));
+      border-radius: var(--radius-lg);
+      padding: 14px 14px 12px;
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.9);
+    }
+
+    .token-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+
+    .token-value {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .token-note {
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Roadmap */
+
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .phase {
+      background: linear-gradient(150deg, rgba(24,24,27,0.96), rgba(30,64,175,0.65));
+      border-radius: var(--radius-lg);
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(59,130,246,0.35);
+    }
+
+    .phase-title {
+      font-size: 0.96rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .phase-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(191,219,254,0.8);
+      color: #dbeafe;
+      margin-bottom: 6px;
+    }
+
+    .phase ul {
+      list-style: none;
+      font-size: 0.82rem;
+      color: #e5e7eb;
+    }
+
+    .phase li {
+      margin-bottom: 4px;
+      position: relative;
+      padding-left: 12px;
+    }
+
+    .phase li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #a5b4fc;
+    }
+
+    /* How to buy */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .step {
+      padding: 14px 14px 12px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      background: linear-gradient(155deg, rgba(15,23,42,0.98), rgba(8,47,73,0.85));
+    }
+
+    .step-number {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(248,250,252,0.7);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      margin-bottom: 6px;
+    }
+
+    .step-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .step-body {
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid rgba(31,41,55,0.9);
+      background: #020617;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-link {
+      text-decoration: none;
+      color: var(--muted);
+    }
+
+    .footer-link:hover {
+      color: var(--text);
+    }
+
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <!-- Replace src with your logo path -->
+       <img src="images/duddy-logo.png" alt="DUDDY Logo" class="nav-logo">
+        <div>
+          <div class="nav-title">DUDDY</div>
+          <div class="nav-pill">$DDY • Meme Token</div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="#how-to-buy" class="btn btn-outline">How to Buy</a>
+        <a href="#community" class="btn btn-primary">Join Community</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="max-w">
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="hero-kicker">
+            <span class="hero-kicker-badge">New on Solana</span>
+            <span class="hero-kicker-text">No stress. Just DUDDY.</span>
+          </div>
+
+          <h1 class="hero-title">
+            The internet’s new <span>favorite dog</span> on-chain.
+          </h1>
+
+          <p class="hero-sub">
+            DUDDY ($DDY) is a fun, community-driven meme token built for
+            late-night charts, inside jokes and good vibes only. No roadmap
+            promises – just a pack that actually enjoys the ride.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary">Buy on DEX (soon)</a>
+            <a href="#tokenomics" class="btn btn-outline">View Tokenomics</a>
+          </div>
+
+          <p class="hero-mini">
+            Contract address: <strong>coming soon</strong> — always verify before trading.
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-glow"></div>
+            <div class="hero-logo-wrap">
+              <!-- Big logo -->
+              <img src="images/duddy-logo.png" alt="DUDDY Logo" class="hero-logo">
+            </div>
+
+            <div class="hero-stat-row">
+              <div class="hero-stat">
+                <div class="hero-stat-label">Ticker</div>
+                <div class="hero-stat-value">$DDY</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Chain</div>
+                <div class="hero-stat-value">Solana</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-label">Supply</div>
+                <div class="hero-stat-value">TBA</div>
+              </div>
+            </div>
+
+            <div class="hero-badge-bottom">
+              Fair launch meme token. No financial advice – just a dog and the
+              people who like him.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">About</div>
+            <h2 class="section-title">What is DUDDY?</h2>
+          </div>
+          <p class="section-description">
+            A simple idea: one cute dog, one ticker, and a community that
+            doesn’t take itself too seriously.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div>
+            <div class="card">
+              <h3 class="card-title">Vibes over promises</h3>
+              <p class="card-body">
+                DUDDY is not here to sell you a 100-page whitepaper. It’s a pure
+                meme token — launched for fun, culture and community. No fake
+                utility buzzwords, no roadmap we don’t believe in.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Community first</h3>
+              <p class="card-body">
+                The real alpha is the pack. DUDDY is built for people who enjoy
+                hanging out in chats, posting memes and watching charts together.
+                Holders drive the narrative, content and direction.
+              </p>
+              <div class="tag-row">
+                <span class="tag-pill">No team tokens (plan)</span>
+                <span class="tag-pill">No presale (plan)</span>
+                <span class="tag-pill">Fair launch culture</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <h3 class="card-title">Key ideas</h3>
+              <p class="card-body">
+                • Keep it simple  
+                • Keep it transparent  
+                • Make it actually fun  
+                <br /><br />
+                Everything else can evolve with the community once DUDDY is
+                live. Until then, the mission is: ship the token, set the
+                vibes, grow the pack.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOKENOMICS -->
+      <section id="tokenomics">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Tokenomics</div>
+            <h2 class="section-title">$DDY at a glance</h2>
+          </div>
+          <p class="section-description">
+            Numbers here are placeholders – update them once the contract is
+            deployed.
+          </p>
+        </div>
+
+        <div class="tokenomics-grid">
+          <div class="token-box">
+            <div class="token-label">Total supply</div>
+            <div class="token-value">TBA</div>
+            <div class="token-note">Example: 1,000,000,000 DDY</div>
+          </div>
+
+          <div class="token-box">
+            <div class="token-label">Buy / sell tax</div>
+            <div class="token-value">0% / 0%</div>
+            <div class="token-note">Pure meme trading – no hidden fees (if you choose 0/0).</div>
+          </div>
+
+          <div class="token-box">
+            <div class="token-label">Liquidity</div>
+            <div class="token-value">TBA</div>
+            <div class="token-note">Plan: add liquidity on a major Solana DEX and lock / burn.</div>
+          </div>
+
+          <div class="token-box">
+            <div class="token-label">Ownership</div>
+            <div class="token-value">TBA</div>
+            <div class="token-note">Option: renounce contract once everything is stable.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROADMAP -->
+      <section id="roadmap">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Roadmap</div>
+            <h2 class="section-title">From idea to full pack</h2>
+          </div>
+        </div>
+
+        <div class="roadmap-grid">
+          <div class="phase">
+            <div class="phase-tag">Phase 1</div>
+            <h3 class="phase-title">Launch the dog</h3>
+            <ul>
+              <li>Deploy DDY on Solana</li>
+              <li>Add initial liquidity on DEX</li>
+              <li>List logo on wallets & trackers</li>
+              <li>Open X / Telegram / Discord</li>
+            </ul>
+          </div>
+
+          <div class="phase">
+            <div class="phase-tag">Phase 2</div>
+            <h3 class="phase-title">Grow the pack</h3>
+            <ul>
+              <li>Community raids & meme contests</li>
+              <li>Influencer shout-outs & collabs</li>
+              <li>Website & light docs live</li>
+              <li>First community events & spaces</li>
+            </ul>
+          </div>
+
+          <div class="phase">
+            <div class="phase-tag"

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="DUDDY (DDY) – a fun, community-driven meme token. No stress. Just DUDDY."
+    content="DUDDY (DDY) – a fun, community-powered meme token on Solana. No stress — just good vibes and late-night holders."
   />
 
   <!-- Google Font -->
@@ -35,13 +35,9 @@
       --transition-fast:180ms ease-out;
     }
 
-    * {
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
+    *{box-sizing:border-box;margin:0;padding:0;}
 
-    body {
+    body{
       font-family:"Poppins",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--text);
       line-height:1.6;
@@ -51,21 +47,21 @@
       animation:bg-move 18s ease-in-out infinite;
     }
 
-    @keyframes bg-move {
-      0% {background-position:0% 50%;}
-      50% {background-position:100% 50%;}
-      100% {background-position:0% 50%;}
+    @keyframes bg-move{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
     }
 
-    .page-wrap {
+    .page-wrap{
       min-height:100vh;
       display:flex;
       flex-direction:column;
     }
 
-    main {flex:1;}
+    main{flex:1;}
 
-    .max-w {
+    .max-w{
       max-width:1120px;
       margin:0 auto;
       padding:20px 16px 60px;
@@ -73,7 +69,7 @@
 
     /* NAV */
 
-    .nav {
+    .nav{
       position:sticky;
       top:0;
       z-index:40;
@@ -83,7 +79,7 @@
       animation:fade-down 700ms ease-out;
     }
 
-    .nav-inner {
+    .nav-inner{
       max-width:1120px;
       margin:0 auto;
       padding:12px 16px;
@@ -93,19 +89,19 @@
       gap:18px;
     }
 
-    .nav-left {
+    .nav-left{
       display:flex;
       align-items:center;
       gap:10px;
     }
 
-    .nav-logo-wrap {
+    .nav-logo-wrap{
       position:relative;
       width:44px;
       height:44px;
     }
 
-    .nav-logo-glow {
+    .nav-logo-glow{
       position:absolute;
       inset:-4px;
       border-radius:18px;
@@ -116,12 +112,12 @@
       animation:pulse-soft 2.4s ease-in-out infinite;
     }
 
-    @keyframes pulse-soft {
-      0%,100% {opacity:.4;transform:scale(.95);}
-      50% {opacity:.9;transform:scale(1.05);}
+    @keyframes pulse-soft{
+      0%,100%{opacity:.4;transform:scale(.95);}
+      50%{opacity:.9;transform:scale(1.05);}
     }
 
-    .nav-logo {
+    .nav-logo{
       position:relative;
       width:44px;
       height:44px;
@@ -133,23 +129,23 @@
       cursor:pointer;
     }
 
-    @keyframes float-logo {
-      0%,100% {transform:translateY(0);}
-      50% {transform:translateY(-4px);}
+    @keyframes float-logo{
+      0%,100%{transform:translateY(0);}
+      50%{transform:translateY(-4px);}
     }
 
-    .nav-logo:hover {
+    .nav-logo:hover{
       transform:translateY(-2px) scale(1.03);
       box-shadow:0 0 30px rgba(56,189,248,.85);
     }
 
-    .nav-title {
+    .nav-title{
       font-size:1.05rem;
       font-weight:700;
       letter-spacing:.05em;
     }
 
-    .nav-pill {
+    .nav-pill{
       font-size:.72rem;
       padding:3px 10px;
       border-radius:999px;
@@ -159,13 +155,15 @@
       text-transform:uppercase;
     }
 
-    .nav-right {
+    .nav-right{
       display:flex;
       align-items:center;
       gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
     }
 
-    .btn {
+    .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -182,24 +180,24 @@
                  background var(--transition-fast),border-color var(--transition-fast),color var(--transition-fast);
     }
 
-    .btn-primary {
+    .btn-primary{
       background:linear-gradient(135deg,var(--accent1),var(--accent3),var(--accent2));
       color:#020617;
       box-shadow:0 14px 32px rgba(37,99,235,.75);
     }
 
-    .btn-primary:hover {
+    .btn-primary:hover{
       transform:translateY(-1px) scale(1.03);
       box-shadow:0 18px 40px rgba(56,189,248,.9);
     }
 
-    .btn-outline {
+    .btn-outline{
       border-color:rgba(148,163,184,.7);
       color:var(--muted);
       background:rgba(15,23,42,.92);
     }
 
-    .btn-outline:hover {
+    .btn-outline:hover{
       color:var(--text);
       border-color:rgba(248,250,252,.9);
       background:radial-gradient(circle at top left,rgba(148,163,184,.42),rgba(15,23,42,.98));
@@ -208,7 +206,7 @@
 
     /* HERO */
 
-    .hero {
+    .hero{
       display:grid;
       grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
       gap:30px;
@@ -217,14 +215,12 @@
     }
 
     @media (max-width:900px){
-      .hero {grid-template-columns:1fr;padding-top:26px;}
+      .hero{grid-template-columns:1fr;padding-top:26px;}
     }
 
-    .hero-left {
-      animation:fade-up 800ms ease-out;
-    }
+    .hero-left{animation:fade-up 800ms ease-out;}
 
-    .hero-kicker {
+    .hero-kicker{
       display:inline-flex;
       align-items:center;
       gap:8px;
@@ -236,7 +232,7 @@
       box-shadow:0 10px 26px rgba(15,23,42,.8);
     }
 
-    .hero-kicker-badge {
+    .hero-kicker-badge{
       padding:3px 10px;
       border-radius:999px;
       background:radial-gradient(circle at top left,rgba(34,197,94,.9),rgba(56,189,248,.35));
@@ -247,51 +243,51 @@
       color:#0b1120;
     }
 
-    .hero-kicker-text {
+    .hero-kicker-text{
       font-size:.78rem;
       color:var(--muted);
     }
 
-    .hero-title {
+    .hero-title{
       font-size:clamp(2.35rem,4.1vw,3.15rem);
       font-weight:700;
       margin-bottom:10px;
     }
 
-    .hero-title span {
+    .hero-title span{
       background:linear-gradient(135deg,var(--accent4),var(--accent1),var(--accent3),var(--accent2));
       -webkit-background-clip:text;
       background-clip:text;
       color:transparent;
     }
 
-    .hero-sub {
+    .hero-sub{
       font-size:.98rem;
       color:var(--muted);
       max-width:520px;
       margin-bottom:20px;
     }
 
-    .hero-actions {
+    .hero-actions{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
       margin-bottom:16px;
     }
 
-    .hero-mini {
+    .hero-mini{
       font-size:.78rem;
       color:var(--muted);
     }
 
-    .hero-right {
+    .hero-right{
       display:flex;
       align-items:center;
       justify-content:center;
       animation:float-card 5.4s ease-in-out infinite;
     }
 
-    .hero-card {
+    .hero-card{
       position:relative;
       background:radial-gradient(circle at top,#1f2937,#020617 60%);
       border-radius:30px;
@@ -303,7 +299,7 @@
       overflow:hidden;
     }
 
-    .hero-glow {
+    .hero-glow{
       position:absolute;
       inset:-70%;
       background:
@@ -313,7 +309,7 @@
       pointer-events:none;
     }
 
-    .hero-logo-wrap {
+    .hero-logo-wrap{
       position:relative;
       z-index:1;
       display:flex;
@@ -321,7 +317,7 @@
       margin-bottom:14px;
     }
 
-    .hero-logo {
+    .hero-logo{
       width:210px;
       max-width:100%;
       border-radius:30px;
@@ -331,17 +327,17 @@
       animation:float-logo-big 5s ease-in-out infinite;
     }
 
-    @keyframes float-card {
-      0%,100% {transform:translateY(0);}
-      50% {transform:translateY(-6px);}
+    @keyframes float-card{
+      0%,100%{transform:translateY(0);}
+      50%{transform:translateY(-6px);}
     }
 
-    @keyframes float-logo-big {
-      0%,100% {transform:translateY(0) scale(1);}
-      50% {transform:translateY(-4px) scale(1.02);}
+    @keyframes float-logo-big{
+      0%,100%{transform:translateY(0) scale(1);}
+      50%{transform:translateY(-4px) scale(1.02);}
     }
 
-    .hero-stat-row {
+    .hero-stat-row{
       position:relative;
       z-index:1;
       display:grid;
@@ -350,7 +346,7 @@
       margin-bottom:14px;
     }
 
-    .hero-stat {
+    .hero-stat{
       padding:9px 9px;
       border-radius:16px;
       background:rgba(15,23,42,.95);
@@ -359,13 +355,13 @@
       transition:transform var(--transition-fast),box-shadow var(--transition-fast),border-color var(--transition-fast);
     }
 
-    .hero-stat:hover {
+    .hero-stat:hover{
       transform:translateY(-2px);
       box-shadow:0 14px 28px rgba(15,23,42,.9);
       border-color:rgba(248,250,252,.85);
     }
 
-    .hero-stat-label {
+    .hero-stat-label{
       font-size:.7rem;
       text-transform:uppercase;
       letter-spacing:.08em;
@@ -373,12 +369,12 @@
       margin-bottom:4px;
     }
 
-    .hero-stat-value {
+    .hero-stat-value{
       font-size:.9rem;
       font-weight:600;
     }
 
-    .hero-badge-bottom {
+    .hero-badge-bottom{
       position:relative;
       z-index:1;
       margin-top:4px;
@@ -393,34 +389,35 @@
 
     /* SECTION BASE */
 
-    section {margin-top:40px;}
+    section{margin-top:40px;}
 
-    .section-header {
+    .section-header{
       display:flex;
       justify-content:space-between;
       align-items:baseline;
       gap:8px;
       margin-bottom:14px;
+      flex-wrap:wrap;
     }
 
-    .section-title {
+    .section-title{
       font-size:1.35rem;
       font-weight:600;
     }
 
-    .section-kicker {
+    .section-kicker{
       font-size:.8rem;
       text-transform:uppercase;
       letter-spacing:.2em;
       color:var(--muted);
     }
 
-    .section-description {
+    .section-description{
       font-size:.87rem;
       color:var(--muted);
     }
 
-    .card {
+    .card{
       background:linear-gradient(145deg,rgba(15,23,42,.98),rgba(2,6,23,.98));
       border-radius:var(--radius-xl);
       padding:18px;
@@ -430,7 +427,7 @@
 
     /* ABOUT GRID */
 
-    .about-grid {
+    .about-grid{
       display:grid;
       grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);
       gap:18px;
@@ -440,25 +437,25 @@
       .about-grid{grid-template-columns:1fr;}
     }
 
-    .card-title {
+    .card-title{
       font-size:1rem;
       font-weight:600;
       margin-bottom:8px;
     }
 
-    .card-body {
+    .card-body{
       font-size:.9rem;
       color:var(--muted);
     }
 
-    .tag-row {
+    .tag-row{
       display:flex;
       flex-wrap:wrap;
       gap:8px;
       margin-top:10px;
     }
 
-    .tag-pill {
+    .tag-pill{
       padding:4px 10px;
       border-radius:999px;
       border:1px solid rgba(148,163,184,.7);
@@ -468,13 +465,13 @@
 
     /* TOKENOMICS */
 
-    .tokenomics-grid {
+    .tokenomics-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
       gap:14px;
     }
 
-    .token-box {
+    .token-box{
       background:radial-gradient(circle at top,rgba(37,99,235,.35),rgba(15,23,42,1));
       border-radius:var(--radius-lg);
       padding:14px 14px 12px;
@@ -484,13 +481,13 @@
       transition:transform var(--transition-fast),box-shadow var(--transition-fast),border-color var(--transition-fast);
     }
 
-    .token-box:hover {
+    .token-box:hover{
       transform:translateY(-3px);
       box-shadow:0 22px 50px rgba(15,23,42,.98);
       border-color:rgba(191,219,254,.9);
     }
 
-    .token-label {
+    .token-label{
       font-size:.72rem;
       text-transform:uppercase;
       letter-spacing:.14em;
@@ -498,12 +495,12 @@
       margin-bottom:5px;
     }
 
-    .token-value {
+    .token-value{
       font-size:1rem;
       font-weight:600;
     }
 
-    .token-note {
+    .token-note{
       font-size:.76rem;
       color:var(--muted);
       margin-top:4px;
@@ -511,13 +508,13 @@
 
     /* ROADMAP */
 
-    .roadmap-grid {
+    .roadmap-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:16px;
     }
 
-    .phase {
+    .phase{
       background:linear-gradient(150deg,rgba(24,24,27,.98),rgba(30,64,175,.7));
       border-radius:var(--radius-lg);
       padding:14px 14px 10px;
@@ -526,18 +523,18 @@
       transition:transform var(--transition-fast),box-shadow var(--transition-fast);
     }
 
-    .phase:hover {
+    .phase:hover{
       transform:translateY(-3px);
       box-shadow:0 24px 60px rgba(15,23,42,1);
     }
 
-    .phase-title {
+    .phase-title{
       font-size:.96rem;
       font-weight:600;
       margin-bottom:6px;
     }
 
-    .phase-tag {
+    .phase-tag{
       display:inline-block;
       font-size:.7rem;
       padding:2px 8px;
@@ -549,19 +546,19 @@
       letter-spacing:.12em;
     }
 
-    .phase ul {
+    .phase ul{
       list-style:none;
       font-size:.82rem;
       color:#e5e7eb;
     }
 
-    .phase li {
+    .phase li{
       margin-bottom:4px;
       position:relative;
       padding-left:12px;
     }
 
-    .phase li::before {
+    .phase li::before{
       content:"•";
       position:absolute;
       left:0;
@@ -570,13 +567,13 @@
 
     /* HOW TO BUY */
 
-    .steps {
+    .steps{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:14px;
     }
 
-    .step {
+    .step{
       padding:14px 14px 12px;
       border-radius:var(--radius-lg);
       border:1px solid var(--border-soft);
@@ -585,13 +582,13 @@
       transition:transform var(--transition-fast),box-shadow var(--transition-fast),border-color var(--transition-fast);
     }
 
-    .step:hover {
+    .step:hover{
       transform:translateY(-3px);
       box-shadow:0 22px 52px rgba(15,23,42,1);
       border-color:rgba(56,189,248,.8);
     }
 
-    .step-number {
+    .step-number{
       width:22px;
       height:22px;
       border-radius:999px;
@@ -603,25 +600,92 @@
       margin-bottom:6px;
     }
 
-    .step-title {
+    .step-title{
       font-size:.9rem;
       font-weight:600;
       margin-bottom:4px;
     }
 
-    .step-body {
+    .step-body{
       font-size:.83rem;
       color:var(--muted);
     }
 
-    /* COMMUNITY */
+    /* STAKING (NEW) */
 
-    footer {
+    .staking-card{
+      display:grid;
+      grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr);
+      gap:18px;
+      align-items:flex-start;
+    }
+
+    .staking-highlight{
+      font-size:.9rem;
+      margin-bottom:10px;
+    }
+
+    .staking-highlight span{
+      font-weight:600;
+      color:var(--accent2);
+    }
+
+    .staking-list{
+      font-size:.84rem;
+      color:var(--muted);
+      margin-left:14px;
+    }
+
+    .staking-list li{
+      margin-bottom:4px;
+    }
+
+    .staking-stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+      gap:10px;
+    }
+
+    .staking-box{
+      border-radius:var(--radius-lg);
+      padding:10px 11px;
+      background:radial-gradient(circle at top,rgba(34,197,94,.3),rgba(15,23,42,1));
+      border:1px solid rgba(52,211,153,.7);
+      box-shadow:0 16px 40px rgba(15,23,42,.9);
+      text-align:left;
+    }
+
+    .staking-label{
+      font-size:.72rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:var(--muted);
+      margin-bottom:4px;
+    }
+
+    .staking-value{
+      font-size:.98rem;
+      font-weight:600;
+    }
+
+    .staking-note{
+      font-size:.75rem;
+      color:var(--muted);
+      margin-top:4px;
+    }
+
+    @media(max-width:900px){
+      .staking-card{grid-template-columns:1fr;}
+    }
+
+    /* COMMUNITY / FOOTER */
+
+    footer{
       border-top:1px solid rgba(31,41,55,.9);
       background:#020617;
     }
 
-    .footer-inner {
+    .footer-inner{
       max-width:1120px;
       margin:0 auto;
       padding:16px;
@@ -634,41 +698,41 @@
       color:var(--muted);
     }
 
-    .footer-links {
+    .footer-links{
       display:flex;
       flex-wrap:wrap;
       gap:12px;
     }
 
-    .footer-link {
+    .footer-link{
       text-decoration:none;
       color:var(--muted);
     }
 
-    .footer-link:hover {
+    .footer-link:hover{
       color:var(--text);
     }
 
     /* SIMPLE FADE-IN ON SCROLL */
 
-    .reveal {
+    .reveal{
       opacity:0;
       transform:translateY(18px);
       transition:opacity 0.6s ease-out,transform 0.6s ease-out;
     }
-    .reveal.visible {
+    .reveal.visible{
       opacity:1;
       transform:translateY(0);
     }
 
-    @keyframes fade-up {
-      from {opacity:0;transform:translateY(18px);}
-      to {opacity:1;transform:translateY(0);}
+    @keyframes fade-up{
+      from{opacity:0;transform:translateY(18px);}
+      to{opacity:1;transform:translateY(0);}
     }
 
-    @keyframes fade-down {
-      from {opacity:0;transform:translateY(-16px);}
-      to {opacity:1;transform:translateY(0);}
+    @keyframes fade-down{
+      from{opacity:0;transform:translateY(-16px);}
+      to{opacity:1;transform:translateY(0);}
     }
   </style>
 </head>
@@ -692,6 +756,8 @@
       </div>
       <div class="nav-right">
         <a href="#how-to-buy" class="btn btn-outline">How to Buy</a>
+        <a href="#staking" class="btn btn-outline">Staking</a>
+        <a href="#airdrop" class="btn btn-outline">Airdrop</a>
         <a href="#community" class="btn btn-primary">Join Community</a>
       </div>
     </div>
@@ -704,7 +770,7 @@
         <div class="hero-left">
           <div class="hero-kicker">
             <span class="hero-kicker-badge">New on Solana</span>
-            <span class="hero-kicker-text">No stress. Just DUDDY.</span>
+            <span class="hero-kicker-text">Community. Culture. Meme energy.</span>
           </div>
 
           <h1 class="hero-title">
@@ -712,9 +778,8 @@
           </h1>
 
           <p class="hero-sub">
-            DUDDY ($DDY) is a fun, community-driven meme token built for
-            late-night charts, inside jokes and good vibes only. No roadmap
-            over-promising – just a pack that actually enjoys the ride.
+            DUDDY ($DDY) is a community-powered meme token on Solana — built for late-night charts,
+            inside jokes and holders who enjoy the ride, not just the candles.
           </p>
 
           <div class="hero-actions">
@@ -723,7 +788,7 @@
           </div>
 
           <p class="hero-mini">
-            Contract address: <strong>coming soon</strong> — always verify before trading.
+            Contract address: <strong>coming soon</strong> — always verify from official channels before trading.
           </p>
         </div>
 
@@ -745,14 +810,13 @@
                 <div class="hero-stat-value">Solana</div>
               </div>
               <div class="hero-stat">
-                <div class="hero-stat-label">Supply</div>
-                <div class="hero-stat-value">TBA</div>
+                <div class="hero-stat-label">Category</div>
+                <div class="hero-stat-value">Meme / Culture</div>
               </div>
             </div>
 
             <div class="hero-badge-bottom">
-              Fair launch meme token. No financial advice – just a dog and the
-              people who like him.
+              Meme token. Real community. No financial advice — just vibes and the pack.
             </div>
           </div>
         </div>
@@ -766,36 +830,401 @@
             <h2 class="section-title">What is DUDDY?</h2>
           </div>
           <p class="section-description">
-            One cute dog, one ticker, one community that doesn’t take itself too seriously.
+            A meme brand built around one dog, one ticker and one rule: the community comes first.
           </p>
         </div>
 
         <div class="about-grid">
           <div>
             <div class="card" style="margin-bottom:14px;">
-              <h3 class="card-title">Vibes over promises</h3>
+              <h3 class="card-title">Culture over complexity</h3>
               <p class="card-body">
-                DUDDY is not here to sell you a 100-page whitepaper. It’s a pure meme token —
-                launched for fun, culture and community. No fake utility buzzwords, no roadmaps
-                we don’t believe in.
+                DUDDY doesn’t pretend to be a hyper-complex protocol. It’s a straight-up meme token
+                designed around culture, humour and community energy. No fake utility buzzwords, no
+                100-page theory — just a brand people enjoy being part of.
               </p>
             </div>
 
             <div class="card">
-              <h3 class="card-title">Community first</h3>
+              <h3 class="card-title">The pack is the alpha</h3>
               <p class="card-body">
-                The real alpha is the pack. DUDDY is built for people who enjoy hanging out in chats,
-                posting memes and watching charts together. Holders drive the narrative, content and direction.
+                The strongest edge in any meme is the community behind it. DUDDY is built for people
+                who actually like hanging out together — chatting, posting memes, watching charts and
+                pushing the story forward as a pack.
               </p>
               <div class="tag-row">
-                <span class="tag-pill">No team tokens (plan)</span>
-                <span class="tag-pill">No presale (plan)</span>
-                <span class="tag-pill">Fair launch culture</span>
+                <span class="tag-pill">Community-first culture</span>
+                <span class="tag-pill">Transparent messaging</span>
+                <span class="tag-pill">Meme-driven growth</span>
               </div>
             </div>
           </div>
 
           <div>
             <div class="card">
-              <h3 class="card-title">Core idea</h3>
-              
+              <h3 class="card-title">Why DUDDY exists</h3>
+              <p class="card-body">
+                Memes turned crypto into culture. DUDDY leans fully into that — with a mascot that’s
+                easy to recognize and a token designed to be shared, not over-explained.<br><br>
+                The mission is simple: build one of the most recognizable meme brands on Solana by
+                giving the internet a dog it actually enjoys running with.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOKENOMICS -->
+      <section id="tokenomics" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Tokenomics</div>
+            <h2 class="section-title">$DDY at a glance</h2>
+          </div>
+          <p class="section-description">
+            A meme token structure focused on trading, staking and long-term community growth.
+          </p>
+        </div>
+
+        <div class="tokenomics-grid">
+          <div class="token-box">
+            <div class="token-label">Total supply</div>
+            <div class="token-value">TBA</div>
+            <div class="token-note">
+              Final supply will be announced with the contract — example: 1,000,000,000 $DDY.
+            </div>
+          </div>
+
+          <div class="token-box">
+            <div class="token-label">Buy / sell tax</div>
+            <div class="token-value">0% / 0%</div>
+            <div class="token-note">
+              Clean meme trading — no hidden fees, no surprise tax flips (if 0/0 is chosen at launch).
+            </div>
+          </div>
+
+          <div class="token-box">
+            <div class="token-label">Planned allocation</div>
+            <div class="token-value">Community-weighted</div>
+            <div class="token-note">
+              Focused on liquidity, staking vaults, airdrops and ecosystem growth. Exact numbers will
+              be published before TGE.
+            </div>
+          </div>
+
+          <div class="token-box">
+            <div class="token-label">Ownership</div>
+            <div class="token-value">To be announced</div>
+            <div class="token-note">
+              Options like LP lock, burns and potential renouncement will be shared transparently with
+              the community once everything is stable.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STAKING -->
+      <section id="staking" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Staking</div>
+            <h2 class="section-title">Stake DUDDY, earn 25% APY</h2>
+          </div>
+          <p class="section-description">
+            A meme-friendly, vault-based staking system that rewards loyal holders — without turning
+            into a DeFi maze.
+          </p>
+        </div>
+
+        <div class="card staking-card">
+          <div>
+            <p class="staking-highlight">
+              Lock your $DDY into the <span>DUDDY Vault</span> and earn a clean, target APY for staying
+              in the pack. Simple UX, honest design — no hidden loops.
+            </p>
+            <ul class="staking-list">
+              <li>Stake and unstake freely once the vault is live.</li>
+              <li>Rewards are streamed from a capped DUDDY staking pool.</li>
+              <li>No leverage, no complex farm-of-farms — just extra DDY for long-term holders.</li>
+              <li>Target APY is designed to stay attractive but sustainable for the protocol.</li>
+            </ul>
+
+            <div style="margin-top:14px;">
+              <a href="#" class="btn btn-primary">Staking dApp (soon)</a>
+              <span style="font-size:.78rem;color:var(--muted);margin-left:6px;">
+                Always read the docs and verify contract addresses before staking.
+              </span>
+            </div>
+          </div>
+
+          <div class="staking-stats">
+            <div class="staking-box">
+              <div class="staking-label">Target APY</div>
+              <div class="staking-value">25% APY</div>
+              <div class="staking-note">Meme-level juicy, designed with long-term sustainability in mind.</div>
+            </div>
+
+            <div class="staking-box">
+              <div class="staking-label">Lock</div>
+              <div class="staking-value">No hard lock</div>
+              <div class="staking-note">Enter and exit freely — longer stakers can be rewarded with future boosts.</div>
+            </div>
+
+            <div class="staking-box">
+              <div class="staking-label">Vault</div>
+              <div class="staking-value">Dedicated pool</div>
+              <div class="staking-note">A capped percentage of supply reserved to feed the DUDDY Vault over time.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AIRDROP -->
+      <section id="airdrop" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Airdrop</div>
+            <h2 class="section-title">DUDDY Season 1 Airdrop 🐶</h2>
+          </div>
+          <p class="section-description">
+            Early pack, early rewards — designed for real community members, not farms and bots.
+          </p>
+        </div>
+
+        <div class="card">
+          <!-- Top summary row -->
+          <div style="margin-bottom:14px;">
+            <p style="font-size:.9rem;">
+              Season 1 airdrop is for the people who actually show up — raiders, meme makers, chat
+              enjoyers and day-one holders. No “farm everything” grind. If you help DUDDY grow, you’re
+              part of the pack.
+            </p>
+          </div>
+
+          <!-- 3-column layout -->
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:16px;">
+            
+            <!-- How to join -->
+            <div style="border-radius:18px;border:1px solid rgba(148,163,184,.6);padding:12px 12px 10px;background:linear-gradient(145deg,rgba(15,23,42,.98),rgba(15,23,42,.9));">
+              <h3 style="font-size:.95rem;font-weight:600;margin-bottom:6px;">1 — How to join</h3>
+              <ul class="staking-list">
+                <li>Follow DUDDY on X, Telegram and Discord.</li>
+                <li>Stay active in chats — talk, react, contribute.</li>
+                <li>Like, reply and share posts with real comments.</li>
+                <li>Join community spaces and events when announced.</li>
+              </ul>
+              <p class="staking-note" style="margin-top:8px;">
+                A simple quest link (Zealy / Galxe / form) will go live before the snapshot.
+              </p>
+            </div>
+
+            <!-- Who gets rewarded -->
+            <div style="border-radius:18px;border:1px solid rgba(148,163,184,.6);padding:12px 12px 10px;background:linear-gradient(145deg,rgba(15,23,42,.98),rgba(15,23,42,.9));">
+              <h3 style="font-size:.95rem;font-weight:600;margin-bottom:6px;">2 — Who actually gets it</h3>
+              <ul class="staking-list">
+                <li><strong>OG pack:</strong> early followers and active chat members.</li>
+                <li><strong>Creators:</strong> meme posts, threads, designs, edits.</li>
+                <li><strong>Raid squad:</strong> people who show up during key pushes.</li>
+                <li><strong>Stakers:</strong> future seasons may boost vault users.</li>
+              </ul>
+              <p class="staking-note" style="margin-top:8px;">
+                Multi-accounts, obvious bots and pure farmers will be filtered out wherever possible.
+              </p>
+            </div>
+
+            <!-- Pool, % and timeline -->
+            <div style="border-radius:18px;border:1px solid rgba(148,163,184,.6);padding:12px 12px 10px;background:linear-gradient(145deg,rgba(15,23,42,.98),rgba(15,23,42,.9));">
+              <h3 style="font-size:.95rem;font-weight:600;margin-bottom:6px;">3 — Pool & timeline</h3>
+              <ul class="staking-list">
+                <li><strong>Pool size:</strong> planned 5% of total $DDY supply.</li>
+                <li><strong>Season name:</strong> “Pack OG”.</li>
+                <li><strong>Claim:</strong> opens after TGE and liquidity are live.</li>
+                <li><strong>Protection:</strong> claim may unlock in waves to reduce instant dumping.</li>
+              </ul>
+              <p class="staking-note" style="margin-top:8px;">
+                Exact snapshot dates will not be pre-announced to reduce short-term airdrop farming.
+              </p>
+            </div>
+          </div>
+
+          <!-- CTA row -->
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-start;">
+            <a href="#" class="btn btn-primary">Join Airdrop Quests (soon)</a>
+            <span style="font-size:.78rem;color:var(--muted);">
+              Watch official DUDDY channels for quest link, snapshot info and claim page.
+            </span>
+          </div>
+
+          <!-- Mini FAQ -->
+          <div style="margin-top:14px;border-top:1px solid rgba(31,41,55,.9);padding-top:10px;">
+            <p style="font-size:.8rem;color:var(--muted);">
+              <strong>Note:</strong> DUDDY airdrops are for community growth, not guaranteed profit.
+              Never share your seed phrase, and always double-check links and contracts.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ROADMAP -->
+      <section id="roadmap" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Roadmap</div>
+            <h2 class="section-title">From meme to movement</h2>
+          </div>
+        </div>
+
+        <div class="roadmap-grid">
+          <div class="phase">
+            <div class="phase-tag">Phase 1</div>
+            <h3 class="phase-title">Light the spark 🔥</h3>
+            <ul>
+              <li>$DDY goes live on-chain.</li>
+              <li>First liquidity pool opens (fair and transparent).</li>
+              <li>Website and socials become home base for the pack.</li>
+              <li>Early community forms, memes start flying.</li>
+            </ul>
+          </div>
+
+          <div class="phase">
+            <div class="phase-tag">Phase 2</div>
+            <h3 class="phase-title">Grow the pack 🐺</h3>
+            <ul>
+              <li>X, Telegram and Discord growth — first real DUDDY fam wave.</li>
+              <li>Meme contests, raids and organic shilling (no botted spam).</li>
+              <li>Listings on trackers (Dexscreener, Gecko / CMC applications where possible).</li>
+              <li>Spaces, collabs and community events to keep the energy moving.</li>
+            </ul>
+          </div>
+
+          <div class="phase">
+            <div class="phase-tag">Phase 3</div>
+            <h3 class="phase-title">Build the brand 🎭</h3>
+            <ul>
+              <li>Final DUDDY mascot identity locked (stickers, GIFs, emotes).</li>
+              <li>Highlight creators and designers as “DUDDY Originals”.</li>
+              <li>Experimental drops: collectibles / badges if community wants them.</li>
+              <li>Consistent branding across threads, clips and edits.</li>
+            </ul>
+          </div>
+
+          <div class="phase">
+            <div class="phase-tag">Phase 4</div>
+            <h3 class="phase-title">Level up the ecosystem 🌍</h3>
+            <ul>
+              <li>Explore CEX applications (no promises — only honest attempts).</li>
+              <li>Refine staking, airdrops and rewards using real community data.</li>
+              <li>Explore community treasury ideas and basic governance concepts.</li>
+              <li>Discuss merch and long-term brand partnerships with the pack.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW TO BUY -->
+      <section id="how-to-buy" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Guide</div>
+            <h2 class="section-title">How to buy $DDY</h2>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-title">Get a Solana wallet</div>
+            <p class="step-body">
+              Download a Solana wallet like Phantom or Backpack. Create a new wallet, back up your
+              seed phrase and keep it offline and private — never share it with anyone.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-title">Fund with SOL</div>
+            <p class="step-body">
+              Buy SOL on a centralized exchange and send it to your wallet address. You’ll use SOL to
+              swap into $DDY and pay network fees.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-title">Swap for $DDY</div>
+            <p class="step-body">
+              Once the official contract is live, paste the address into a Solana DEX
+              (Raydium, Jupiter, etc.), double-check it’s the correct token, and swap your SOL into DDY.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-title">Join the pack</div>
+            <p class="step-body">
+              Add DDY to your wallet watchlist, join the community channels and help shape the story
+              with memes, feedback and good energy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMMUNITY -->
+      <section id="community" class="reveal">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Community</div>
+            <h2 class="section-title">Run with DUDDY</h2>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="card-body">
+            DUDDY is only as strong as the people behind it. If you vibe with the idea, jump in
+            early, plant your flag and help shape the meme from day one — as a holder, creator or
+            just someone who likes a good dog and good energy.
+          </p>
+          <div class="tag-row" style="margin-top:12px;">
+            <a href="https://x.com/duddy_planet" target="_blank" class="btn btn-outline">X (Twitter)</a>
+            <a href="https://t.me/duddyplanet" target="_blank" class="btn btn-outline">Telegram</a>
+            <a href="https://discord.gg/s8YSnFPvZ" target="_blank" class="btn btn-outline">Discord</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div>© <span id="year"></span> DUDDY • $DDY. Meme token. No promises, just vibes.</div>
+      <div class="footer-links">
+        <a href="#about" class="footer-link">About</a>
+        <a href="#tokenomics" class="footer-link">Tokenomics</a>
+        <a href="#how-to-buy" class="footer-link">Guide</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+  // Current year in footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Simple scroll reveal
+  const reveals = document.querySelectorAll(".reveal");
+  const onScroll = () => {
+    const trigger = window.innerHeight * 0.82;
+    reveals.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < trigger) {
+        el.classList.add("visible");
+      }
+    });
+  };
+  window.addEventListener("scroll", onScroll);
+  onScroll();
+</script>
+</body>
+</html>

@@ -4,552 +4,62 @@
   <meta charset="UTF-8" />
   <title>DUDDY • $DDY</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="DUDDY ($DDY) – a community-powered meme token on Solana."
-  />
+  <meta name="description" content="DUDDY ($DDY) – a community-powered meme token on Solana." />
+
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    /* ===== BASIC RESET ===== */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
-      color: #e5e7eb;
-      min-height: 100vh;
-    }
-
-    a { text-decoration: none; }
-
-    .page-wrap {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    main { flex: 1; }
-
-    .max-w {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 20px 16px 40px;
-    }
-
-    /* ===== NAVBAR ===== */
-    header.nav {
-      position: sticky;
-      top: 0;
-      z-index: 40;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(to bottom, rgba(2,6,23,.96), rgba(2,6,23,.88), transparent);
-      border-bottom: 1px solid rgba(148,163,184,.3);
-    }
-
-    .nav-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 10px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .nav-logo {
-      width: 40px;
-      height: 40px;
-      border-radius: 999px;
-      object-fit: cover;
-      box-shadow: 0 0 20px rgba(56,189,248,.9);
-      border: 2px solid #f9fafb;
-    }
-
-    .nav-title {
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: .06em;
-    }
-
-    .nav-sub {
-      font-size: .7rem;
-      color: #9ca3af;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: flex-end;
-    }
-
-    .nav-pill {
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,.7);
-      font-size: .78rem;
-      color: #e5e7eb;
-      background: radial-gradient(circle at top left, rgba(79,70,229,.6), rgba(15,23,42,.95));
-      transition: transform .15s ease-out, box-shadow .15s ease-out, border-color .15s ease-out;
-    }
-
-    .nav-pill:hover {
-      transform: translateY(-1px);
-      border-color: #f9fafb;
-      box-shadow: 0 12px 26px rgba(15,23,42,1);
-    }
-
-    .nav-pill.main-cta {
-      background: linear-gradient(135deg, #22c55e, #22d3ee, #a855f7);
-      color: #020617;
-      border-color: transparent;
-      box-shadow: 0 12px 32px rgba(56,189,248,.9);
-    }
-
-    .nav-pill.main-cta:hover {
-      box-shadow: 0 16px 40px rgba(56,189,248,1);
-    }
-
-    /* ===== HERO ===== */
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-      gap: 26px;
-      align-items: center;
-      padding-top: 28px;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 26px;
-      }
-    }
-
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 4px 10px 4px 4px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,.5);
-      background: rgba(15,23,42,.95);
-      margin-bottom: 14px;
-      font-size: .75rem;
-      color: #9ca3af;
-    }
-
-    .hero-kicker-badge {
-      padding: 3px 10px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #22c55e, #22d3ee);
-      color: #020617;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: .14em;
-    }
-
-    .hero-title {
-      font-size: clamp(2.3rem, 4.2vw, 3.2rem);
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-
-    .hero-title span {
-      background: linear-gradient(120deg, #22c55e, #22d3ee, #a855f7, #f97316);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .hero-sub {
-      font-size: .98rem;
-      color: #9ca3af;
-      max-width: 520px;
-      margin-bottom: 18px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .btn-main {
-      padding: 10px 20px;
-      border-radius: 999px;
-      font-size: .86rem;
-      font-weight: 600;
-      color: #020617;
-      background: linear-gradient(135deg, #22c55e, #22d3ee, #a855f7);
-      box-shadow: 0 14px 32px rgba(56,189,248,.9);
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      transition: transform .16s ease-out, box-shadow .16s ease-out;
-    }
-
-    .btn-main:hover {
-      transform: translateY(-1px) scale(1.02);
-      box-shadow: 0 18px 40px rgba(56,189,248,1);
-    }
-
-    .btn-ghost {
-      padding: 10px 18px;
-      border-radius: 999px;
-      border: 1px solid rgba(148,163,184,.7);
-      background: rgba(15,23,42,.96);
-      color: #e5e7eb;
-      font-size: .86rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      cursor: pointer;
-      transition: transform .16s ease-out, border-color .16s ease-out, box-shadow .16s ease-out;
-    }
-
-    .btn-ghost:hover {
-      transform: translateY(-1px);
-      border-color: #f9fafb;
-      box-shadow: 0 12px 30px rgba(15,23,42,1);
-    }
-
-    .hero-mini {
-      font-size: .78rem;
-      color: #6b7280;
-    }
-
-    .hero-mini span {
-      color: #e5e7eb;
-      font-weight: 500;
-    }
-
-    .hero-card {
-      position: relative;
-      background: radial-gradient(circle at top, #1e293b, #020617 60%);
-      border-radius: 28px;
-      padding: 18px 18px 16px;
-      border: 1px solid rgba(148,163,184,.5);
-      box-shadow: 0 24px 60px rgba(0,0,0,.9);
-      overflow: hidden;
-    }
-
-    .hero-card-glow {
-      position: absolute;
-      inset: -60%;
-      background:
-        radial-gradient(circle at top left, rgba(34,197,94,.18), transparent 60%),
-        radial-gradient(circle at bottom right, rgba(129,140,248,.18), transparent 60%);
-      opacity: .85;
-      pointer-events: none;
-    }
-
-    .hero-logo-wrap {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 12px;
-    }
-
-    .hero-logo {
-      width: 190px;
-      max-width: 100%;
-      border-radius: 26px;
-      border: 2px solid #f9fafb;
-      box-shadow: 0 18px 46px rgba(59,130,246,1);
-      background: #020617;
-    }
-
-    .stat-row {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .stat-card {
-      border-radius: 18px;
-      padding: 10px 10px 8px;
-      background: linear-gradient(135deg, rgba(56,189,248,.9), rgba(129,140,248,.9));
-      color: #020617;
-      box-shadow: 0 16px 40px rgba(15,23,42,1);
-    }
-
-    .stat-label {
-      font-size: .68rem;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      opacity: .9;
-      margin-bottom: 4px;
-    }
-
-    .stat-value {
-      font-size: .98rem;
-      font-weight: 700;
-    }
-
-    .hero-note {
-      position: relative;
-      z-index: 1;
-      margin-top: 4px;
-      border-radius: 16px;
-      border: 1px dashed rgba(148,163,184,.8);
-      padding: 8px 10px;
-      font-size: .78rem;
-      color: #9ca3af;
-      text-align: center;
-      background: rgba(15,23,42,.96);
-    }
-
-    /* ===== QUICK GRID OF SECTIONS ===== */
-    .sections {
-      margin-top: 36px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-
-    .sec-card {
-      border-radius: 22px;
-      padding: 14px 14px 12px;
-      border: 1px solid rgba(148,163,184,.5);
-      background: radial-gradient(circle at top, rgba(56,189,248,.25), rgba(15,23,42,1));
-      box-shadow: 0 18px 44px rgba(0,0,0,.9);
-      transition: transform .16s ease-out, box-shadow .16s ease-out, border-color .16s ease-out;
-    }
-
-    .sec-card:hover {
-      transform: translateY(-3px);
-      border-color: #e5e7eb;
-      box-shadow: 0 24px 60px rgba(0,0,0,1);
-    }
-
-    .sec-tag {
-      font-size: .7rem;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      color: #c7d2fe;
-      margin-bottom: 4px;
-    }
-
-    .sec-title {
-      font-size: .96rem;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .sec-body {
-      font-size: .8rem;
-      color: #9ca3af;
-    }
-
-    .sec-link {
-      display: inline-flex;
-      margin-top: 8px;
-      font-size: .78rem;
-      color: #a5b4fc;
-    }
-
-    .sec-link span {
-      margin-left: 4px;
-      transition: transform .16s ease-out;
-    }
-
-    .sec-card:hover .sec-link span {
-      transform: translateX(3px);
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      border-top: 1px solid rgba(30,41,59,.9);
-      background: #020617;
-    }
-
-    .footer-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 14px 16px 18px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      font-size: .78rem;
-      color: #9ca3af;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .footer-link {
-      color: #9ca3af;
-    }
-
-    .footer-link:hover {
-      color: #e5e7eb;
-    }
-
-    @media (max-width: 640px) {
-      .nav-inner {flex-direction: column; align-items: flex-start;}
-      .nav-links {justify-content: flex-start;}
-    }
-  </style>
 </head>
 
 <body>
+
 <div class="page-wrap">
-  <!-- NAVBAR -->
-  <header class="nav">
-    <div class="nav-inner">
-      <div class="nav-left">
-        <!-- apni DDY dog wali PNG ka naam yahan rakho: e.g. ddy-logo.png -->
-        <img src="ddy-logo.png" alt="DUDDY Logo" class="nav-logo">
-        <div>
-          <div class="nav-title">DUDDY • $DDY</div>
-          <div class="nav-sub">Meme token on Solana</div>
-        </div>
-      </div>
-      <nav class="nav-links">
-        <a class="nav-pill" href="tokenomics.html">Tokenomics</a>
-        <a class="nav-pill" href="staking.html">Staking</a>
-        <a class="nav-pill" href="airdrop.html">Airdrop</a>
-        <a class="nav-pill" href="docs.html">Docs / Whitepaper</a>
-        <a class="nav-pill main-cta" href="#community">Join Community</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <div class="max-w">
-      <!-- HERO -->
-      <section class="hero">
-        <div>
-          <div class="hero-kicker">
-            <span class="hero-kicker-badge">$DDY</span>
-            <span>Community. Culture. Meme energy.</span>
-          </div>
+<header class="nav">
+  <div class="nav-inner">
 
-          <h1 class="hero-title">
-            The internet’s new <span>favorite dog</span> on-chain.
-          </h1>
+    <div class="nav-left">
+      <img src="duddy-logo.png" alt="DUDDY Logo" class="nav-logo">
 
-          <p class="hero-sub">
-            DUDDY ($DDY) is a community-powered meme token on Solana — built for late-night charts, inside jokes and holders who enjoy the ride.
-          </p>
-
-          <div class="hero-actions">
-            <a href="tokenomics.html" class="btn-main">View Tokenomics</a>
-            <a href="staking.html" class="btn-ghost">Stake $DDY</a>
-            <a href="airdrop.html" class="btn-ghost">Airdrop details</a>
-          </div>
-
-          <p class="hero-mini">
-            Contract address: <span>coming soon</span> — always verify from official channels.
-          </p>
-        </div>
-
-        <aside class="hero-card">
-          <div class="hero-card-glow"></div>
-          <div class="hero-logo-wrap">
-            <!-- same logo / mascot -->
-            <img src="ddy-logo.png" alt="DUDDY Mascot" class="hero-logo">
-          </div>
-
-          <div class="stat-row">
-            <div class="stat-card">
-              <div class="stat-label">Ticker</div>
-              <div class="stat-value">$DDY</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-label">Chain</div>
-              <div class="stat-value">Solana</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-label">Category</div>
-              <div class="stat-value">Meme / Culture</div>
-            </div>
-          </div>
-
-          <div class="hero-note">
-            Meme-first project with a clear brand and dedicated community. Full details live in the docs.
-          </div>
-        </aside>
-      </section>
-
-      <!-- QUICK SECTION GRID -->
-      <section class="sections" id="community" style="margin-top: 40px;">
-        <article class="sec-card">
-          <div class="sec-tag">Tokenomics</div>
-          <h2 class="sec-title">$DDY at a glance</h2>
-          <p class="sec-body">
-            Supply, allocation and liquidity plans in one clean breakdown.
-          </p>
-          <a class="sec-link" href="tokenomics.html">Open tokenomics<span>→</span></a>
-        </article>
-
-        <article class="sec-card">
-          <div class="sec-tag">Staking</div>
-          <h2 class="sec-title">Vault-based rewards</h2>
-          <p class="sec-body">
-            Single-sided $DDY staking with a clear target APY and simple UX.
-          </p>
-          <a class="sec-link" href="staking.html">View staking page<span>→</span></a>
-        </article>
-
-        <article class="sec-card">
-          <div class="sec-tag">Airdrop</div>
-          <h2 class="sec-title">Community distribution</h2>
-          <p class="sec-body">
-            Structured airdrop for early supporters, meme creators and active holders.
-          </p>
-          <a class="sec-link" href="airdrop.html">Airdrop details<span>→</span></a>
-        </article>
-
-        <article class="sec-card">
-          <div class="sec-tag">Docs</div>
-          <h2 class="sec-title">Whitepaper & overview</h2>
-          <p class="sec-body">
-            Full project narrative, roadmap and design decisions in one place.
-          </p>
-          <a class="sec-link" href="docs.html">Open docs / PDF<span>→</span></a>
-        </article>
-      </section>
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div>© 2026 DUDDY • $DDY. All rights reserved.</div>
-      <div class="footer-links">
-        <a class="footer-link" href="mailto:duddyofficial.ddy@gmail.com">Contact: duddyofficial.ddy@gmail.com</a>
+      <div>
+        <div class="nav-title">DUDDY • $DDY</div>
+        <div class="nav-sub">Meme token on Solana</div>
       </div>
     </div>
-  </footer>
+
+    <nav class="nav-links">
+      <a class="nav-pill" href="tokenomics.html">Tokenomics</a>
+      <a class="nav-pill" href="staking.html">Staking</a>
+      <a class="nav-pill" href="airdrop.html">Airdrop</a>
+      <a class="nav-pill" href="docs.html">Docs / Whitepaper</a>
+      <a class="nav-pill main-cta" href="#community">Join Community</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main class="max-w">
+
+  <div class="badge">$DDY — Community • Culture • Meme energy</div>
+
+  <section class="hero">
+    <h1>The internet’s new <span>favorite dog</span> on-chain.</h1>
+
+    <p>DUDDY ($DDY) is a community-powered meme token built on Solana — made for late-night charts,
+      inside jokes, and holders who enjoy the ride.</p>
+
+    <div class="hero-actions">
+      <a class="cta" href="tokenomics.html">View Tokenomics</a>
+      <a class="cta-outline" href="staking.html">Stake $DDY</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 DUDDY — Meme token on Solana</p>
+</footer>
+
 </div>
+
 </body>
-                                                                                    </html>
+</html>

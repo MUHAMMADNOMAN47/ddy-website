@@ -200,3 +200,8 @@ img {
     font-size: 26px;
   }
 }
+.nav-logo {
+  height: 48px;
+  width: auto;
+  border-radius: 50%;
+}

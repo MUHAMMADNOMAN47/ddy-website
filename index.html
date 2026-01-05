@@ -1,68 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>DUDDY • $DDY</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<header class="nav">
-  <div class="max-w nav-inner">
-    <div class="brand">
-      <img src="duddy-logo.png" class="nav-logo" alt="DUDDY Logo">
-      <div>
-        <div class="brand-title">DUDDY</div>
-        <div class="brand-sub">$DDY • SOLANA MEME</div>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>DUDDY • $DDY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="DUDDY ($DDY) – a fun, community-powered meme token on Solana."
+    />
+
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-wrap">
+      <!-- ============ NAVBAR ============ -->
+      <header class="nav">
+        <div class="max-w nav-inner">
+          <div class="nav-left">
+            <div class="nav-logo-wrap">
+              <div class="nav-logo-glow"></div>
+              <img src="duddy-logo.png" alt="DUDDY Logo" class="nav-logo" />
+            </div>
+            <div>
+              <div class="nav-title">DUDDY • $DDY</div>
+              <div class="nav-sub">Meme token on Solana</div>
+            </div>
+          </div>
+
+          <nav class="nav-links">
+            <a href="#tokenomics" class="nav-pill">Tokenomics</a>
+            <a href="#staking" class="nav-pill">Staking</a>
+            <a href="#airdrop" class="nav-pill">Airdrop</a>
+            <a href="#docs" class="nav-pill">Docs</a>
+            <a href="#community" class="nav-pill main-cta">Join community</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+          <div class="max-w hero-grid">
+            <!-- LEFT -->
+            <div class="hero-left reveal">
+              <div class="hero-chip">
+                <span class="hero-chip-badge">$DDY</span>
+                <span>Community. Culture. Meme energy.</span>
+              </div>
+
+              <h1 class="hero-title">
+                The internet’s new
+                <span class="gradient-word">favorite dog</span> on-chain.
+              </h1>
+
+              <p class="hero-text">
+                DUDDY ($DDY) is a fun, community-powered meme token — built for memes,
+                good vibes and late-night holders who enjoy the ride.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#buy" class="btn btn-primary">Buy now</a>
+                <a href="#staking" class="btn btn-outline">Stake $DDY</a>
+              </div>
+
+              <p class="contract-note">
+                Contract address:
+                <span>coming soon</span> — always verify from official channels.
+              </p>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="hero-right reveal">
+              <div class="mascot-card float-card">
+                <div class="mascot-header">
+                  <div class="mascot-pill">
+                    <img
+                      src="duddy-logo.png"
+                      alt="DUDDY Mascot"
+                      class="mascot-pill-logo"
+                    />
+                    <span>DUDDY mascot</span>
+                  </div>
+                </div>
+
+                <div class="mascot-logo-wrap">
+                  <img
+                    src="duddy-logo.png"
+                    alt="DUDDY Logo Large"
+                    class="mascot-main-logo"
+                  />
+                </div>
+
+                <div class="mascot-grid">
+                  <div class="mascot-stat">
+                    <div class="stat-label">Ticker</div>
+                    <div class="stat-value">$DDY</div>
+                  </div>
+                  <div class="mascot-stat">
+                    <div class="stat-label">Chain</div>
+                    <div class="stat-value">Solana</div>
+                  </div>
+                  <div class="mascot-stat">
+                    <div class="stat-label">Category</div>
+                    <div class="stat-value">Meme / Culture</div>
+                  </div>
+                </div>
+
+                <p class="mascot-text">
+                  One clean mascot, one ticker and a community focused on
+                  having fun while the market does its thing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ QUICK FEATURE CARDS ============ -->
+        <section class="feature-section">
+          <div class="max-w feature-grid">
+            <article class="feature-card reveal" id="tokenomics">
+              <h3 class="feature-title">$DDY at a glance</h3>
+              <p class="feature-text">
+                Supply, allocation and liquidity plans in one clean breakdown.
+              </p>
+              <a href="tokenomics.html" class="feature-link">Open tokenomics →</a>
+            </article>
+
+            <article class="feature-card reveal" id="staking">
+              <h3 class="feature-title">Vault-based rewards</h3>
+              <p class="feature-text">
+                Single-sided $DDY staking with a simple, transparent reward model.
+              </p>
+              <a href="staking.html" class="feature-link">View staking page →</a>
+            </article>
+
+            <article class="feature-card reveal" id="airdrop">
+              <h3 class="feature-title">Community airdrop</h3>
+              <p class="feature-text">
+                Structured distributions for early supporters, creators and
+                active holders.
+              </p>
+              <a href="airdrop.html" class="feature-link">Airdrop details →</a>
+            </article>
+
+            <article class="feature-card reveal" id="docs">
+              <h3 class="feature-title">Docs &amp; whitepaper</h3>
+              <p class="feature-text">
+                Full project overview, roadmap and design decisions in one place.
+              </p>
+              <a href="DUDDY_Whitepaper_v1_1.pdf" class="feature-link">
+                Open PDF whitepaper →
+              </a>
+            </article>
+          </div>
+        </section>
+
+        <!-- ============ NUMBERS ============ -->
+        <section class="numbers">
+          <div class="max-w">
+            <h2 class="section-heading reveal">DUDDY by the numbers</h2>
+
+            <div class="numbers-grid">
+              <div class="numbers-card reveal">
+                <div class="numbers-label">Max supply</div>
+                <div class="numbers-value">1,000,000,000 $DDY</div>
+              </div>
+
+              <div class="numbers-card reveal">
+                <div class="numbers-label">Community allocation</div>
+                <div class="numbers-value">55%</div>
+                <p class="numbers-note">Quests, airdrops and meme incentives.</p>
+              </div>
+
+              <div class="numbers-card reveal">
+                <div class="numbers-label">Liquidity &amp; listings</div>
+                <div class="numbers-value">25%</div>
+                <p class="numbers-note">Deep pools and future integrations.</p>
+              </div>
+
+              <div class="numbers-card reveal">
+                <div class="numbers-label">Staking &amp; rewards</div>
+                <div class="numbers-value">20%</div>
+                <p class="numbers-note">Designed for real holders, not tourists.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ ROADMAP ============ -->
+        <section class="roadmap">
+          <div class="max-w">
+            <h2 class="section-heading reveal">
+              A simple roadmap with degen energy
+            </h2>
+
+            <div class="roadmap-grid">
+              <article class="roadmap-card reveal">
+                <div class="phase-pill">Phase 1</div>
+                <h3 class="roadmap-title">Launch the dog</h3>
+                <p class="roadmap-text">
+                  $DDY goes live on-chain. Initial liquidity is added and
+                  verified. The website and socials become the official home.
+                  The first wave of real community members joins in.
+                </p>
+              </article>
+
+              <article class="roadmap-card reveal">
+                <div class="phase-pill">Phase 2</div>
+                <h3 class="roadmap-title">Grow the pack</h3>
+                <p class="roadmap-text">
+                  Awareness around $DDY starts to build. Community raids, memes
+                  and collabs push the brand out. Listings on trackers and tools
+                  make DDY easier to follow. Regular spaces and events turn
+                  holders into an active pack.
+                </p>
+              </article>
+
+              <article class="roadmap-card reveal">
+                <div class="phase-pill">Phase 3</div>
+                <h3 class="roadmap-title">Lock in the meme</h3>
+                <p class="roadmap-text">
+                  The DUDDY mascot and visual style become recognizable.
+                  Sticker packs, GIFs and shareable meme assets go live.
+                  Staking launches to reward real holders over time. Community
+                  experiments begin — NFTs, contests and early perks.
+                </p>
+              </article>
+
+              <article class="roadmap-card reveal">
+                <div class="phase-pill">Phase 4</div>
+                <h3 class="roadmap-title">Scale the story</h3>
+                <p class="roadmap-text">
+                  Explore strategic exchange listings. Introduce
+                  community-driven treasury concepts. Develop long-term
+                  utilities shaped by holders. Grow partnerships, collabs and
+                  brand visibility.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ MEME PACK ============ -->
+        <section class="meme-pack">
+          <div class="max-w">
+            <div class="meme-card reveal">
+              <div class="meme-label">Meme pack</div>
+              <p class="meme-text">
+                The dogs and degenerates that define this cycle:
+              </p>
+
+              <div class="meme-chip-row">
+                <span class="meme-chip">
+                  <img
+                    src="https://cryptologos.cc/logos/shiba-inu-shib-logo.png"
+                    alt="SHIB"
+                  />
+                  $SHIB
+                </span>
+
+                <span class="meme-chip alt">
+                  <img
+                    src="https://cryptologos.cc/logos/pepe-pepe-logo.png"
+                    alt="PEPE"
+                  />
+                  $PEPE
+                </span>
+
+                <span class="meme-chip purple">
+                  <img
+                    src="https://cryptologos.cc/logos/dogecoin-doge-logo.png"
+                    alt="DOGE"
+                  />
+                  $DOGE
+                </span>
+
+                <span class="meme-chip">
+                  <img
+                    src="https://cryptologos.cc/logos/hawk-hawk-logo.png"
+                    alt="HAWK"
+                  />
+                  $HAWK
+                </span>
+
+                <span class="meme-chip primary">
+                  <img src="duddy-logo.png" alt="DUDDY" />
+                  $DDY
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ COMMUNITY ============ -->
+        <section class="community" id="community">
+          <div class="max-w community-inner reveal">
+            <h2 class="section-heading">Join the DUDDY community</h2>
+            <p class="community-text">
+              Follow the pack, drop your memes and never trade alone again.
+            </p>
+
+            <div class="social-row">
+              <a
+                href="https://x.com/duddy_planet"
+                target="_blank"
+                class="social-pill"
+                >X / Twitter</a
+              >
+              <a
+                href="https://t.me/duddyplanet"
+                target="_blank"
+                class="social-pill"
+                >Telegram</a
+              >
+              <a
+                href="https://discord.gg/s8YSnFPvZ"
+                target="_blank"
+                class="social-pill"
+                >Discord</a
+              >
+            </div>
+
+            <p class="social-note">
+              Official links above are the only trusted channels for DUDDY.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="footer">
+        <div class="max-w footer-inner">
+          <div class="footer-left">
+            <p class="footer-main">
+              DUDDY • $DDY — One dog. One pack. One story in motion.
+            </p>
+            <p class="footer-copy">
+              © 2026 DUDDY • $DDY. All rights reserved.
+            </p>
+          </div>
+
+          <div class="footer-right">
+            <p class="footer-contact">
+              Contact:
+              <a href="mailto:duddyofficial.ddy@gmail.com">
+                duddyofficial.ddy@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
-    <nav class="nav-links">
-      <a href="index.html#tokenomics" class="nav-link">Tokenomics</a>
-      <a href="staking.html" class="nav-link">Staking</a>
-      <a href="airdrop.html" class="nav-link">Airdrop</a>
-      <a href="roadmap.html" class="nav-link">Roadmap</a>
-      <a href="whitepaper.html" class="nav-link">Docs</a>
-      <a href="community.html" class="nav-link nav-cta">Join</a>
-    </nav>
-  </div>
-</header>
 
-<main class="page">
-  <div class="max-w">
-    <section class="hero">
-      <div>
-        <h1 class="hero-title">The internet’s new <span>favorite dog</span> on‑chain.</h1>
-        <p class="hero-sub">
-          DUDDY ($DDY) is a fun, community-powered meme token — built for memes,
-          good vibes and late‑night holders.
-        </p>
-        <a href="#tokenomics" class="btn btn-primary">View Tokenomics</a>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-label">Token</div>
-        <div class="stat-value">$DDY • Solana</div>
-        <div class="stat-note">Simple, clean and community driven.</div>
-      </div>
-    </section>
-
-    <section id="tokenomics" class="section">
-      <h2 class="section-title">$DDY at a glance</h2>
-      <div class="stats-grid">
-        <div class="stat-card"><div class="stat-label">Total Supply</div><div class="stat-value">1,000,000,000</div></div>
-        <div class="stat-card"><div class="stat-label">Tax</div><div class="stat-value">0% / 0%</div></div>
-        <div class="stat-card"><div class="stat-label">Liquidity</div><div class="stat-value">Locked (planned)</div></div>
-        <div class="stat-card"><div class="stat-label">Ownership</div><div class="stat-value">Community Focused</div></div>
-      </div>
-    </section>
-  </div>
-</main>
-
-<footer class="footer">
-  <div class="max-w footer-inner">
-    <div>DUDDY • $DDY — One dog. One pack. One story in motion.</div>
-    <div>Contact: <a class="footer-link" href="mailto:duddyofficial.ddy@gmail.com">duddyofficial.ddy@gmail.com</a></div>
-  </div>
-</footer>
-</body>
+    <!-- ============ SMALL JS FOR ANIMATIONS ============ -->
+    <script>
+      // scroll reveal
+      const reveals = document.querySelectorAll(".reveal");
+      const onScroll = () => {
+        const trigger = window.innerHeight * 0.84;
+        reveals.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < trigger) el.classList.add("visible");
+        });
+      };
+      window.addEventListener("scroll", onScroll);
+      onScroll();
+    </script>
+  </body>
 </html>

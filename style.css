@@ -829,3 +829,62 @@ main {
   opacity: 1;
   transform: translateY(0);
 }
+.meme-pack-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.meme-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.meme-sub {
+  color: #9ca3af;
+  font-size: .9rem;
+  margin-bottom: 18px;
+}
+
+.meme-pack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 14px;
+  justify-items: center;
+}
+
+.meme-token {
+  background: radial-gradient(circle at top,
+    rgba(56,189,248,.25),
+    rgba(2,6,23,.95)
+  );
+  border: 1px solid rgba(148,163,184,.5);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.65);
+  transition: transform .18s ease-out, box-shadow .18s ease-out;
+}
+
+.meme-token:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 20px 48px rgba(0,0,0,.9);
+}
+
+.meme-icon img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.big-ddy .meme-icon img {
+  width: 68px;
+  height: 68px;
+}
+
+.meme-label {
+  display: block;
+  margin-top: 6px;
+  font-weight: 600;
+  font-size: .85rem;
+  color: #e5e7eb;
+}

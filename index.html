@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="DUDDY ($DDY) — a fun, community-powered meme token on Solana. Built for memes, good vibes and late-night holders."
+    content="DUDDY ($DDY) — community-powered meme token on Solana with clean tokenomics, degen energy and a simple roadmap."
   />
+  <!-- Manrope font -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,10 +17,10 @@
 
   <!-- NAVBAR -->
   <header class="nav">
-    <div class="nav-inner">
+    <div class="nav-inner max-w">
       <div class="nav-left">
         <img src="duddy-logo.png" alt="DUDDY Logo" class="nav-logo" />
-        <div>
+        <div class="nav-text">
           <div class="nav-title">DUDDY • $DDY</div>
           <div class="nav-sub">Meme token on Solana</div>
         </div>
@@ -40,22 +42,29 @@
       <!-- HERO -->
       <section class="hero section-reveal">
         <div class="hero-left">
-          <p class="hero-kicker">$DDY • Community • Culture • Meme energy</p>
+          <div class="hero-chip-row">
+            <div class="ddy-chip">
+              <span class="ddy-badge">$DDY</span>
+              <span class="ddy-text">Community. Culture. Meme energy.</span>
+            </div>
+          </div>
+
           <h1 class="hero-title">
             The internet’s new <span>favorite dog</span> on-chain.
           </h1>
+
           <p class="hero-sub">
-            DUDDY ($DDY) is a fun, community-powered meme token — built for memes,
-            good vibes and late-night holders who actually enjoy the ride.
+            DUDDY ($DDY) is a clean, meme-first Solana token — simple supply,
+            fun branding and one job: keep the pack moving together.
           </p>
 
           <div class="hero-actions">
-            <a href="#" class="btn btn-primary">Buy now</a>
+            <a href="#" class="btn btn-primary">Buy $DDY</a>
             <a href="#tokenomics" class="btn btn-ghost">View tokenomics</a>
           </div>
 
           <p class="hero-mini">
-            Contract address: <strong>coming soon</strong> — always verify from official channels.
+            Contract address will be shared only through official channels — always verify before ape.
           </p>
         </div>
 
@@ -63,93 +72,70 @@
           <div class="hero-card">
             <div class="hero-glow"></div>
 
-            <!-- logo + chip -->
-            <div class="hero-logo-wrap">
-              <img src="duddy-logo.png" alt="DUDDY Logo" class="hero-logo" />
-              <span class="hero-logo-chip">DUDDY Mascot</span>
+            <div class="hero-mascot-pill">
+              <span class="hero-mascot-dot"></span>
+              <span>DUDDY mascot</span>
             </div>
 
-            <!-- only 2 gradient boxes -->
-            <div class="hero-stat-row hero-stat-row--two">
-              <div class="hero-stat hero-stat--gradient">
+            <div class="hero-logo-wrap">
+              <img src="duddy-logo.png" alt="DUDDY Logo" class="hero-logo" />
+            </div>
+
+            <div class="hero-stat-row">
+              <div class="hero-stat gradient-stat">
                 <div class="hero-stat-label">Ticker</div>
                 <div class="hero-stat-value">$DDY</div>
               </div>
-              <div class="hero-stat hero-stat--gradient">
+              <div class="hero-stat gradient-stat">
                 <div class="hero-stat-label">Chain</div>
                 <div class="hero-stat-value">Solana</div>
+              </div>
+              <div class="hero-stat gradient-stat">
+                <div class="hero-stat-label">Style</div>
+                <div class="hero-stat-value">Meme / Culture</div>
               </div>
             </div>
 
             <p class="hero-card-text">
-              One clean mascot, one ticker and a community focused on having fun while the market does its thing.
+              One mascot, one ticker and a pack that prefers clean design over messy promises.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- QUICK LINKS SECTION -->
-      <section class="feature-grid section-reveal">
-        <div class="feature-box">
-          <h3>$DDY</h3>
-          <p>Fixed-supply meme token with Solana speed and low fees.</p>
+      <!-- CA BOX -->
+      <section class="ca-section section-reveal">
+        <h2 class="section-title">Find $DDY on Solana</h2>
+        <p class="section-sub">
+          Contract address will be announced at launch. Box below is just a placeholder for now.
+        </p>
+
+        <div class="ca-box">
+          <div class="ca-tag">CA</div>
+          <div class="ca-address" id="ca-address">So1aNaDuddyExampleAddress0000000000</div>
+          <button class="ca-copy-btn" id="copy-btn">Copy</button>
         </div>
-        <div class="feature-box">
-          <h3>Community</h3>
-          <p>Built around holders, memes, raids and late-night charts.</p>
-        </div>
-        <div class="feature-box">
-          <h3>Culture</h3>
-          <p>One dog, one vibe — a brand people actually want to share.</p>
-        </div>
-        <div class="feature-box">
-          <h3>Meme energy</h3>
-          <p>Sticker packs, GIFs and content that fits this cycle.</p>
-        </div>
+        <div class="ca-note">Never trust random DMs. Always confirm the CA from official DUDDY channels.</div>
       </section>
 
-      <!-- “AT A GLANCE” + CTAS -->
-      <section class="cta-grid section-reveal">
-        <div class="cta-card">
-          <h3>$DDY at a glance</h3>
-          <p>Supply, allocation and liquidity plans in one clean breakdown.</p>
-          <a href="#tokenomics" class="cta-link">Open tokenomics →</a>
-        </div>
-        <div class="cta-card">
-          <h3>Vault-based rewards</h3>
-          <p>Single-sided $DDY staking with a simple, transparent reward model.</p>
-          <a href="#staking" class="cta-link">View staking page →</a>
-        </div>
-        <div class="cta-card">
-          <h3>Community airdrop</h3>
-          <p>Structured distributions for early supporters, creators and active holders.</p>
-          <a href="#airdrop" class="cta-link">Airdrop details →</a>
-        </div>
-        <div class="cta-card">
-          <h3>Docs &amp; whitepaper</h3>
-          <p>Full project overview, roadmap and design choices in one place.</p>
-          <a href="#docs" class="cta-link">Open PDF whitepaper →</a>
-        </div>
-      </section>
-
-      <!-- TOKENOMICS -->
+      <!-- DUDDY BY THE NUMBERS -->
       <section id="tokenomics" class="section-block section-reveal">
         <div class="section-header">
           <h2>DUDDY by the numbers</h2>
-          <p>High-level breakdown of how $DDY is designed.</p>
+          <p>Simple, readable breakdown for a meme token that isn’t trying to be everything.</p>
         </div>
 
         <div class="stats-grid">
           <div class="stat-card">
             <div class="stat-label">Max supply</div>
             <div class="stat-value">1,000,000,000 $DDY</div>
-            <p class="stat-note">Fixed supply — no surprise mints.</p>
+            <p class="stat-note">Fixed supply — no stealth mints, no hidden buttons.</p>
           </div>
 
           <div class="stat-card">
             <div class="stat-label">Community allocation</div>
             <div class="stat-value">55%</div>
-            <p class="stat-note">Quests, airdrops and meme incentives.</p>
+            <p class="stat-note">Quests, airdrops, memes and pack incentives.</p>
           </div>
 
           <div class="stat-card">
@@ -161,7 +147,47 @@
           <div class="stat-card">
             <div class="stat-label">Staking &amp; rewards</div>
             <div class="stat-value">20%</div>
-            <p class="stat-note">Designed for real holders, not tourists.</p>
+            <p class="stat-note">Reserved for diamond-paw holders over time.</p>
+          </div>
+        </div>
+
+        <!-- TOKEN ALLOCATION STYLE BLOCK -->
+        <div class="allocation-wrapper">
+          <div class="allocation-card">
+            <div class="allocation-chart-placeholder">
+              <div class="allocation-ring"></div>
+              <div class="allocation-center">DDY</div>
+            </div>
+            <div class="allocation-legend">
+              <div class="alloc-row">
+                <span class="alloc-dot alloc-community"></span>
+                <span class="alloc-label">Community &amp; airdrops</span>
+                <span class="alloc-percent">35%</span>
+              </div>
+              <div class="alloc-row">
+                <span class="alloc-dot alloc-liquidity"></span>
+                <span class="alloc-label">DEX liquidity</span>
+                <span class="alloc-percent">25%</span>
+              </div>
+              <div class="alloc-row">
+                <span class="alloc-dot alloc-staking"></span>
+                <span class="alloc-label">Staking rewards</span>
+                <span class="alloc-percent">20%</span>
+              </div>
+              <div class="alloc-row">
+                <span class="alloc-dot alloc-marketing"></span>
+                <span class="alloc-label">Marketing &amp; raids</span>
+                <span class="alloc-percent">10%</span>
+              </div>
+              <div class="alloc-row">
+                <span class="alloc-dot alloc-treasury"></span>
+                <span class="alloc-label">Treasury &amp; ops</span>
+                <span class="alloc-percent">10%</span>
+              </div>
+              <p class="alloc-note">
+                Numbers are placeholders until final tokenomics are published. Structure stays simple on purpose.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -170,14 +196,18 @@
       <section id="staking" class="section-block section-reveal">
         <div class="section-header">
           <h2>Staking: diamond-paw rewards</h2>
-          <p>Simple vault model, focused on real participation.</p>
+          <p>Vault-style staking for holders who actually stay.</p>
         </div>
         <p class="section-text">
-          $DDY staking is built around a single, clean idea: reward holders who actually stick around.
-          A vault-style approach keeps things readable — deposit DUDDY, earn yield, track your share.
+          Deposit DUDDY into a single staking vault, earn yield that tracks your share of the pool, and keep the UX readable.
         </p>
+        <ul class="bullet-list">
+          <li>Single staking pool — no confusing menus.</li>
+          <li>Transparent rewards and on-chain tracking.</li>
+          <li>Designed for holders, not in-and-out tourists.</li>
+        </ul>
         <p class="section-text subtle">
-          Staking details and APY examples will be published once contracts are live and audited.
+          Final APY examples and contract details will be shared after audits and mainnet launch.
         </p>
       </section>
 
@@ -188,13 +218,13 @@
           <p>Rewarding the people who show up early and stay active.</p>
         </div>
         <ul class="bullet-list">
-          <li>Early community members and active chat regulars.</li>
-          <li>Content creators, meme artists and raid leaders.</li>
-          <li>On-chain activity and staking participation once live.</li>
-          <li>Future quests and campaigns for new waves of holders.</li>
+          <li>Early pack members and active chat regulars.</li>
+          <li>Raid leaders, meme artists and content creators.</li>
+          <li>On-chain DUDDY activity and staking once live.</li>
+          <li>Future quests so new holders can still join the run.</li>
         </ul>
         <p class="section-text subtle">
-          Exact criteria and snapshots will be announced across the official channels before any airdrop goes live.
+          Exact snapshots and criteria will be announced across official DUDDY channels before any distribution.
         </p>
       </section>
 
@@ -202,7 +232,7 @@
       <section class="section-block section-reveal">
         <div class="section-header">
           <h2>A simple roadmap with degen energy</h2>
-          <p>Clear phases, room to evolve with the pack.</p>
+          <p>Clear phases — enough structure to build, enough freedom to have fun.</p>
         </div>
 
         <div class="roadmap-grid">
@@ -210,9 +240,7 @@
             <div class="phase-tag">Phase 1</div>
             <h3>Launch the dog</h3>
             <p>
-              $DDY goes live on-chain. Initial liquidity is added and verified.
-              The website and socials become the official home. The first wave of real
-              community members joins in.
+              $DDY goes live, liquidity is verified and the website plus socials become home base for the pack.
             </p>
           </div>
 
@@ -220,9 +248,7 @@
             <div class="phase-tag">Phase 2</div>
             <h3>Grow the pack</h3>
             <p>
-              Awareness around $DDY starts to build. Community raids, memes and collabs push the brand out.
-              Listings on trackers and tools make DDY easier to follow. Regular spaces and events turn holders
-              into an active pack.
+              Raids, memes and collabs push DUDDY across CT. Listings and tools make it easier to track the run.
             </p>
           </div>
 
@@ -230,9 +256,7 @@
             <div class="phase-tag">Phase 3</div>
             <h3>Lock in the meme</h3>
             <p>
-              The DUDDY mascot and visual style become recognizable. Sticker packs, GIFs and shareable meme assets
-              go live. Staking launches to reward real holders over time. Community experiments begin — NFTs,
-              contests and early perks.
+              Mascot, sticker packs and GIFs go everywhere. Staking launches and early community experiments begin.
             </p>
           </div>
 
@@ -240,8 +264,7 @@
             <div class="phase-tag">Phase 4</div>
             <h3>Scale the story</h3>
             <p>
-              Explore strategic exchange listings. Introduce community-driven treasury ideas.
-              Develop long-term utilities shaped by holders. Grow partnerships, collabs and brand visibility.
+              Strategic listings, treasury ideas and long-term utilities shaped directly by holders.
             </p>
           </div>
         </div>
@@ -251,41 +274,41 @@
       <section class="meme-pack-section section-reveal">
         <h2 class="meme-title">$DDY runs with the memes</h2>
         <p class="meme-sub">
-          The spirit of crypto culture — familiar faces, new energy, one growing pack.
+          Familiar faces, new energy — one growing pack under the same sky.
         </p>
 
         <div class="meme-pack">
           <div class="meme-token">
-            <div class="meme-icon">
-              <img src="shib.png" alt="$SHIB meme token">
+            <div class="meme-circle">
+              <img src="shib.png" alt="$SHIB" />
             </div>
             <span class="meme-label">$SHIB</span>
           </div>
 
           <div class="meme-token">
-            <div class="meme-icon">
-              <img src="pepe.png" alt="$PEPE meme token">
+            <div class="meme-circle">
+              <img src="pepe.png" alt="$PEPE" />
             </div>
             <span class="meme-label">$PEPE</span>
           </div>
 
           <div class="meme-token">
-            <div class="meme-icon">
-              <img src="doge.png" alt="$DOGE meme token">
+            <div class="meme-circle">
+              <img src="doge.png" alt="$DOGE" />
             </div>
             <span class="meme-label">$DOGE</span>
           </div>
 
           <div class="meme-token">
-            <div class="meme-icon">
-              <img src="hawk.png" alt="$HAWK meme token">
+            <div class="meme-circle">
+              <img src="hawk.png" alt="$HAWK" />
             </div>
             <span class="meme-label">$HAWK</span>
           </div>
 
           <div class="meme-token big-ddy">
-            <div class="meme-icon">
-              <img src="duddy-logo.png" alt="$DDY meme token">
+            <div class="meme-circle">
+              <img src="duddy-logo.png" alt="$DDY" />
             </div>
             <span class="meme-label">$DDY</span>
           </div>
@@ -299,10 +322,12 @@
           <p>Everything about DUDDY in one place.</p>
         </div>
         <p class="section-text">
-          The DUDDY whitepaper covers the core vision, token design, staking model, airdrop plan and long-term roadmap.
-          It’s written to be readable — even if you’re checking it at 2 a.m. between charts.
+          The DUDDY whitepaper covers vision, token design, allocation, staking and roadmap — readable even at 2 a.m.
         </p>
-        <a href="DUDDY_Whitepaper_v1_1.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+        <a href="DUDDY_Whitepaper_v1_1.pdf"
+           class="btn btn-outline"
+           target="_blank"
+           rel="noopener">
           Open PDF whitepaper
         </a>
       </section>
@@ -311,26 +336,30 @@
       <section id="community" class="section-block section-reveal">
         <div class="section-header">
           <h2>Join the DUDDY community</h2>
-          <p>Follow the pack, drop your memes and never trade alone again.</p>
+          <p>Drop your memes, follow the runs and never trade alone again.</p>
         </div>
 
         <div class="social-row">
-          <a href="https://x.com/duddy_planet" target="_blank" rel="noopener" class="social-btn">
+          <a href="https://x.com/official_duddy" target="_blank" rel="noopener" class="social-btn">
             <span class="social-icon">𝕏</span>
-            <span>X / Twitter</span>
+            <span>Official X / Twitter</span>
           </a>
-          <a href="https://t.me/duddyplanet" target="_blank" rel="noopener" class="social-btn">
+          <a href="https://t.me/duddyofficial_ddy" target="_blank" rel="noopener" class="social-btn">
             <span class="social-icon">✈</span>
             <span>Telegram</span>
           </a>
-          <a href="https://discord.gg/s8YSnFPvZ" target="_blank" rel="noopener" class="social-btn">
+          <a href="https://discord.gg/aKgK2RDep" target="_blank" rel="noopener" class="social-btn">
             <span class="social-icon">◎</span>
             <span>Discord</span>
+          </a>
+          <a href="https://whatsapp.com/channel/0029VbBmrsNHLHQY5eylWR2d" target="_blank" rel="noopener" class="social-btn">
+            <span class="social-icon">💬</span>
+            <span>WhatsApp channel</span>
           </a>
         </div>
 
         <p class="section-text subtle">
-          Official links above are the only trusted channels for DUDDY. Always check URLs — copycats are common in crypto.
+          These are the only official DUDDY links. Anything else is a copycat.
         </p>
       </section>
 
@@ -350,19 +379,38 @@
 </div>
 
 <script>
-  // simple scroll reveal
-  const sections = document.querySelectorAll('.section-reveal');
-  const onScroll = () => {
-    const trigger = window.innerHeight * 0.8;
-    sections.forEach((sec) => {
-      const rect = sec.getBoundingClientRect();
-      if (rect.top < trigger) {
-        sec.classList.add('visible');
-      }
+  // Scroll reveal (IntersectionObserver)
+  const revealSections = document.querySelectorAll(".section-reveal");
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+  revealSections.forEach(sec => observer.observe(sec));
+
+  // Copy CA button
+  const copyBtn = document.getElementById("copy-btn");
+  const caAddress = document.getElementById("ca-address");
+
+  if (copyBtn && caAddress) {
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(caAddress.textContent.trim())
+        .then(() => {
+          copyBtn.textContent = "Copied!";
+          setTimeout(() => (copyBtn.textContent = "Copy"), 1200);
+        })
+        .catch(() => {
+          copyBtn.textContent = "Error";
+          setTimeout(() => (copyBtn.textContent = "Copy"), 1200);
+        });
     });
-  };
-  window.addEventListener('scroll', onScroll);
-  onScroll();
+  }
 </script>
 </body>
 </html>

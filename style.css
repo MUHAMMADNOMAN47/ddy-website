@@ -728,8 +728,8 @@ main {
 .meme-token:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow:
-    0 26px 60px rgba(0,0,0,.95),
-    0 0 40px rgba(59,130,246,.75);
+  0 14px 28px rgba(0,0,0,.75),
+  0 0 22px rgba(56,189,248,.35);
 }
 
 /* logo inside */

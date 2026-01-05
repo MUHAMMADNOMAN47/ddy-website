@@ -56,22 +56,37 @@ main {
   align-items: center;
   gap: 10px;
 }
-
 .nav-logo {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
+  height: 40px;
+  width: 40px;
+  border-radius: 999px;
   object-fit: cover;
   border: 2px solid #f9fafb;
-  box-shadow: 0 0 22px rgba(56,189,248,.9);
-  animation: logo-float 4.5s ease-in-out infinite;
+  box-shadow: 0 0 0 rgba(56, 189, 248, 0.0);
+  animation: logoGlow 4s ease-in-out infinite alternate;
+}
+
+/* subtle breathing glow */
+@keyframes logoGlow {
+  0% {
+    box-shadow:
+      0 0 0 rgba(94, 234, 212, 0.0),
+      0 0 0 rgba(59, 130, 246, 0.0);
+  }
+  100% {
+    box-shadow:
+      0 0 22px rgba(94, 234, 212, 0.9),
+      0 0 40px rgba(59, 130, 246, 0.7);
+  }
 }
 
 @keyframes logo-float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-3px); }
 }
-
+.nav-logo:hover {
+  transform: translateY(-1px) scale(1.03);
+}
 .nav-title {
   font-size: 1rem;
   font-weight: 700;
@@ -670,4 +685,76 @@ main {
 .section-reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+/* ========== HOVER PULSE FOR ICONS ========== */
+
+@keyframes softPulse {
+  0% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(56, 189, 248, 0);
+  }
+  50% {
+    transform: translateY(-1px) scale(1.06);
+    box-shadow: 0 0 18px rgba(56, 189, 248, 0.55);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 rgba(56, 189, 248, 0);
+  }
+}
+
+/* social icons (X / TG / DC etc.) */
+.social-links a,
+.social-links button {
+  transition: transform 0.2s ease-out;
+}
+
+.social-links a:hover,
+.social-links button:hover {
+  animation: softPulse 0.6s ease-out;
+}
+
+/* meme coins bubbles hover */
+.meme-pack .meme-token,
+.meme-pack .meme-bubble {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.meme-pack .meme-token:hover,
+.meme-pack .meme-bubble:hover {
+  animation: softPulse 0.6s ease-out;
+}
+/* floating coins */
+@keyframes floatCoin {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* wrapper class: adjust to your real one
+   e.g. .meme-token, .meme-bubble, .meme-coin etc. */
+.meme-pack .meme-token,
+.meme-pack .meme-bubble {
+  animation: floatCoin 4.2s ease-in-out infinite;
+}
+
+/* thora staggered effect for variety */
+.meme-pack .meme-token:nth-child(2),
+.meme-pack .meme-bubble:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.meme-pack .meme-token:nth-child(3),
+.meme-pack .meme-bubble:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.meme-pack .meme-token:nth-child(4),
+.meme-pack .meme-bubble:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.meme-pack .meme-token:nth-child(5),
+.meme-pack .meme-bubble:nth-child(5) {
+  animation-delay: 1.6s;
 }

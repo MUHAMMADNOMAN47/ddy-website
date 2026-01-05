@@ -758,3 +758,74 @@ main {
 .meme-pack .meme-bubble:nth-child(5) {
   animation-delay: 1.6s;
 }
+/* =========================
+   CTA buttons hover pulse
+   ========================= */
+.hero-actions .btn-primary,
+.hero-actions .btn-secondary {
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, background 0.18s ease-out;
+}
+
+.hero-actions .btn-primary:hover,
+.hero-actions .btn-secondary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 24px rgba(56, 189, 248, 0.6);
+}
+
+/* =========================
+   Social icons hover pulse
+   ========================= */
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background 0.2s ease-out;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.6);
+}
+/* =========================
+   DUDDY nav logo glow
+   ========================= */
+.brand-chip,
+.brand-chip img,
+.nav-logo,
+.site-logo {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-chip::before,
+.nav-logo::before,
+.site-logo::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0, rgba(56, 189, 248, 0.85), transparent 60%);
+  opacity: 0.0;
+  filter: blur(10px);
+  z-index: -1;
+  transition: opacity 0.45s ease-out;
+}
+
+.brand-chip:hover::before,
+.nav-logo:hover::before,
+.site-logo:hover::before {
+  opacity: 1;
+}
+/* =========================
+   Scroll reveal
+   ========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
